@@ -92,9 +92,7 @@ body {
 
 /* Tablet (768px ~ 1023px) */
 @media screen and (max-width: 1023px) {
-  .main-logo img {
-    width: 80%;
-  }
+  .main-logo img,
   .main-menu img {
     width: 80%;
   }
@@ -106,9 +104,7 @@ body {
 
 /* Mobile ( ~ 767px) */
 @media screen and (max-width: 767px) {
-  .main-logo img {
-    width: 60%;
-  }
+  .main-logo img,
   .main-menu img {
     width: 60%;
   }
