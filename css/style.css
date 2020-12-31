@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+/* Global */
+:root {
+  /* color */
+  --color-white: #eeeeee;
+  --color-light-gray: #dbdbdb;
+  --color-gray: #a4a4a4;
+  --color-dark-gray: #707070;
+
+  /* font size */
+  --font-xlarge: 30px;
+  --font-large: 25px;
+  --font-regular: 18px;
+  --font-small: 15px;
+  --font-micro: 12px;
+
+  /* font weight */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+}
