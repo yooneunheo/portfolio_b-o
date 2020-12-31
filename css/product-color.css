@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+/* 01 */
+.product-item:nth-child(1) .product-item__colors div:nth-child(1) {
+  background-color: rgb(218, 218, 218);
+}
+.product-item:nth-child(1) .product-item__colors div:nth-child(2) {
+  background-color: rgb(69, 70, 76);
+}
+.product-item:nth-child(1) .product-item__colors div:nth-child(3) {
+  background-color: rgb(132, 99, 71);
+}
+.product-item:nth-child(1) .product-item__colors div:nth-child(4) {
+  background-color: rgb(172, 151, 103);
+}
+
+/* 02 */
+.product-item:nth-child(2) .product-item__colors div:nth-child(1) {
+  background-color: rgb(218, 218, 218);
+}
+.product-item:nth-child(2) .product-item__colors div:nth-child(2) {
+  background-color: rgb(69, 70, 76);
+}
+.product-item:nth-child(2) .product-item__colors div:nth-child(3) {
+  background-color: rgb(132, 99, 71);
+}
+.product-item:nth-child(2) .product-item__colors div:nth-child(4) {
+  background-color: rgb(172, 151, 103);
+}
+
+/* 03 */
+.product-item:nth-child(3) .product-item__colors div:nth-child(1) {
+  background-color: rgb(218, 218, 218);
+}
+.product-item:nth-child(3) .product-item__colors div:nth-child(2) {
+  background-color: rgb(69, 70, 76);
+}
+.product-item:nth-child(3) .product-item__colors div:nth-child(3) {
+  background-color: rgb(132, 99, 71);
+}
+.product-item:nth-child(3) .product-item__colors div:nth-child(4) {
+  background-color: rgb(172, 151, 103);
+}

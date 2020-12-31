@@ -1,0 +1,234 @@
+@charset 'utf-8';
+
+/* iPhone 가로 스크롤 방지 */
+.container {
+  overflow-x: hidden;
+}
+
+/* Header & Filter-category */
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.filter-category {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem;
+  border-top: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--color-light-gray);
+  z-index: 11;
+}
+
+.filter-category-sticky .filter-category {
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.1);
+
+  /* for iPhone */
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
+  -moz-backdrop-filter: saturate(180%) blur(15px);
+  -o-backdrop-filter: saturate(180%) blur(15px);
+  backdrop-filter: saturate(180%) blur(15px);
+}
+
+.header__links,
+.filter-category__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.filter-category__links a {
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.filter-category__links a:hover,
+.filter-category__links a:focus {
+  font-weight: var(--weight-bold);
+}
+
+.filter-category__links a::after {
+  position: absolute;
+  content: '';
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-dark-gray);
+  transition: all 0.5s ease;
+}
+.filter-category__links a:hover::after,
+.filter-category__links a:focus::after {
+  width: 100%;
+}
+
+/* sub-page-content */
+.sub-page-content {
+  margin-top: 104px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.sub-page-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: var(--font-large);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  color: var(--color-dark-gray);
+}
+
+.sub-page-title div {
+  margin-right: 0.7em;
+}
+
+.sub-page-title div:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.2em;
+}
+
+.sub-page-title div:nth-child(2) {
+  background-color: var(--color-dark-gray);
+  width: 1px;
+  height: 0.8em;
+}
+
+.sub-page-title div:nth-child(3) {
+  font-size: 0.7em;
+  letter-spacing: 0.15em;
+}
+
+/* Product */
+.product-list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.product-item {
+  width: 31%;
+  height: 0;
+  padding-bottom: 40%;
+  margin: 1%;
+  position: relative;
+  cursor: pointer;
+  background-color: var(--color-white);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.product-item__info {
+  font-size: var(--font-small);
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+}
+
+.product-item__info p {
+  margin: 0.5em;
+}
+
+.product-item__info p:first-child {
+  font-weight: var(--weight-medium);
+  color: var(--color-dark-gray);
+}
+
+.product-item__info p:last-child {
+  color: var(--color-gray);
+}
+
+.product-item__colors {
+  font-size: var(--font-micro);
+  position: absolute;
+  bottom: 2.5em;
+  right: 2.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.product-item__colors div {
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.55em;
+  border-radius: 50%;
+}
+
+.product-item__colors div:nth-child(1) {
+  background-color: rgb(218, 218, 218);
+}
+.product-item__colors div:nth-child(2) {
+  background-color: rgb(69, 70, 76);
+}
+.product-item__colors div:nth-child(3) {
+  background-color: rgb(132, 99, 71);
+}
+.product-item__colors div:nth-child(4) {
+  background-color: rgb(172, 151, 103);
+}
+
+/* Tablet (768px ~ 1023px) */
+@media screen and (max-width: 1023px) {
+  .filter-category__links {
+    display: none;
+  }
+
+  .sub-page-title {
+    font-size: var(--font-regular);
+    padding: 1.5em;
+  }
+
+  .product-item {
+    width: 47%;
+    margin: 1.5%;
+    padding-bottom: 55%;
+    background-size: 70%;
+  }
+}
+
+/* Mobile ( ~ 767px) */
+@media screen and (max-width: 767px) {
+  .sub-page-title {
+    font-size: var(--font-small);
+    padding: 1.5em;
+  }
+
+  .product-item {
+    width: 100%;
+    margin: 2% 0;
+    padding-bottom: 100%;
+    background-size: 60%;
+  }
+
+  .product-item__info {
+    font-size: var(--font-micro);
+  }
+}

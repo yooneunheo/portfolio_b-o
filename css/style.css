@@ -3,7 +3,7 @@
 /* Global */
 :root {
   /* color */
-  --color-white: #eeeeee;
+  --color-white: #fafafa;
   --color-light-gray: #dbdbdb;
   --color-gray: #a4a4a4;
   --color-dark-gray: #707070;
@@ -12,7 +12,7 @@
   --font-xlarge: 30px;
   --font-large: 25px;
   --font-regular: 18px;
-  --font-small: 15px;
+  --font-small: 14px;
   --font-micro: 12px;
 
   /* font weight */
@@ -20,4 +20,14 @@
   --weight-medium: 500;
   --weight-semi-bold: 600;
   --weight-bold: 700;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+}
+
+a {
+  color: var(--color-dark-gray);
 }
