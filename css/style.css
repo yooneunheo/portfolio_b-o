@@ -1,21 +1,21 @@
 @charset 'utf-8';
 
-/* Global */
+/* GLOBAL */
 :root {
-  /* color */
+  /* COLOR */
   --color-white: #fafafa;
   --color-light-gray: #dbdbdb;
   --color-gray: #a4a4a4;
   --color-dark-gray: #707070;
 
-  /* font size */
+  /* FONT SIZE */
   --font-xlarge: 30px;
   --font-large: 25px;
   --font-regular: 18px;
   --font-small: 14px;
   --font-micro: 12px;
 
-  /* font weight */
+  /* FONT WEIGHT */
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semi-bold: 600;

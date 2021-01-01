@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-/* Main */
+/* MAIN */
 body {
   width: 100vw;
   height: 100vh;
@@ -8,14 +8,14 @@ body {
   background-color: #fefefe;
 }
 
-/* Logo */
+/* LOGO */
 #main-logo {
   position: absolute;
   top: 5%;
   left: 5%;
 }
 
-/* Menu */
+/* MENU */
 #main-menu {
   position: absolute;
   top: 5%;
@@ -23,7 +23,7 @@ body {
   cursor: pointer;
 }
 
-/* Ripple */
+/* RIPPLE */
 .ripple {
   width: 60vw;
   height: 60vw;
@@ -65,7 +65,7 @@ body {
   }
 }
 
-/* Title */
+/* TITLE */
 .main-title {
   position: absolute;
   top: 50%;
@@ -83,7 +83,7 @@ body {
   text-align: center;
 }
 
-/* Tablet (768px ~ 1023px) */
+/* TABLET (768px ~ 1023px) */
 @media screen and (max-width: 1023px) {
   #main-logo img,
   #main-menu img {
@@ -95,7 +95,7 @@ body {
   }
 }
 
-/* Mobile ( ~ 767px) */
+/* MOBILE ( ~ 767px) */
 @media screen and (max-width: 767px) {
   #main-logo img,
   #main-menu img {
