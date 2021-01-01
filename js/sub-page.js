@@ -7,11 +7,10 @@
     const itemWrapper = document.querySelector('.product-item-wrapper');
     const productItem = document.querySelectorAll(".product-item");
     const headerHeight = document.querySelector('#header').getBoundingClientRect().height;
+    const categoryBtn = document.querySelector('.category-btn');
 
-    console.log(headerHeight);
 
-
-    // FUNCTION STICKY NAV
+    // FUNCTION FOR STICKY NAV
 	function stickyCate() {
 		if (yOffset > headerHeight) {
 			document.body.classList.add('make-nav-sticky');
@@ -21,7 +20,7 @@
     }
     
 
-    // FUNCTION ARROW UP BUTTON
+    // FUNCTION FOR ARROW UP BUTTON
     function showArrowUp() {
         const arrowUp = document.querySelector('.arrow-up');
 
@@ -44,7 +43,13 @@
     });
 
 
-    // FUNCTION FILTERING
+    // RESPONSIVE NAV FOR SMALL WIDTH
+    categoryBtn.addEventListener('click', () => {
+        filterCate.classList.toggle("show");
+    });
+
+
+    // FUNCTION FOR FILTERING
     filterCate.addEventListener('click', (e)=>{
         const filter = e.target.dataset.filter;
         if(filter == null) {
