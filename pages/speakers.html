@@ -1,371 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bang & Olufsen - Speaker</title>
     <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- ICON -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/sub-page.css">
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sub-page.css" />
     <!-- SCRIPT -->
-    <script src="../js/sub-page.js" type="text/javascript" defer charset="utf-8"></script>
-</head>
-<body>
+    <script
+      src="../js/sub-page.js"
+      type="text/javascript"
+      defer
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-
-        <!-- HEADER -->
-        <header id="header">
-			<div class="header__links">
-				<a href="#">
-                    <span></span>
-                    <span></span>
-                </a>
-				<a href="../index.html">
-                    <img src="../images/etc/logo.png" alt="logo" />
-                </a>
-				<a href="#">
-                    <img src="../images/etc/icon-bag.png" alt="bag" />
-                </a>
-			</div>
-        </header>
-        
-        <!-- FILTER CATEGORY -->
-		<nav class="sticky-nav">
-            <div class="category-btn">
-                <span>Category  <i class="xi-angle-down-min"></i></span> 
-            </div>
-			<div class="filter-category">
-                <a href="#" class="filter-category__link selected" data-filter="*">view all</a>
-                <a href="#" class="filter-category__link" data-filter="portable">portable</a>
-                <a href="#" class="filter-category__link" data-filter="multiroom">multiroom</a>
-                <a href="#" class="filter-category__link" data-filter="sets">speaker sets</a>
-                <a href="#" class="filter-category__link" data-filter="theatre">home theatre</a>
-                <a href="#" class="filter-category__link" data-filter="stereo">stereo</a>
-                <a href="#" class="filter-category__link" data-filter="architectural">architectural</a>
-            </div>
-            <!-- TOGGLE BUTTON -->
-            <div class="filter-category-btn">
-            </div>
-        </nav>
-
-        <!-- SUBPAGE CONTENT -->
-        <div class="sub-page-content">
-
-            <!-- SUBPAGE TITLE -->
-            <section class="sub-page-title">
-                <div onclick="location.href='speakers.html';">speaker</div>
-                <i class="xi-angle-right-thin"></i>
-            </section>
-
-            <!-- PRODUCT LIST -->
-            <section class="product-list">
-                <ul class="product-item-wrapper">
-                    <li class="product-item" style="background-image: url(../images/products/product01.png);" onclick="location.href='#';" data-type="multiroom">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound Edge</p>
-                            <p class="product-item__info__price">£2,900</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product02.png)" data-type="multiroom">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound Balance</p>
-                            <p class="product-item__info__price">£1,750</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product03.png)" data-type="multiroom, theatre">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound stage</p>
-                            <p class="product-item__info__price">£1,250</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product04.png)" data-type="portable">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beolit 20</p>
-                            <p class="product-item__info__price">£450</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product05.png)" data-type="portable, multiroom">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound 1</p>
-                            <p class="product-item__info__price">£1,250</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product06.png)" data-type="multiroom">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound 2</p>
-                            <p class="product-item__info__price">£1,650</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product07.png)" data-type="multiroom">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beoplay A9</p>
-                            <p class="product-item__info__price">£2,250</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product08.png)" data-type="">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beogram 4000c - Recreated Limited Edition</p>
-                            <p class="product-item__info__price">£9,000</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product09.png)" data-type="portable">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound A1 2nd Gen</p>
-                            <p class="product-item__info__price">£200</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product10.png)" data-type="multiroom">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beoplay M3</p>
-                            <p class="product-item__info__price">£280</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product11.png)" data-type="multiroom">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beoplay M5</p>
-                            <p class="product-item__info__price">£550</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product12.png)" data-type="portable">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beoplay P6</p>
-                            <p class="product-item__info__price">£350</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product13.png)" data-type="sets">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound Stage and Beosound 1</p>
-                            <p class="product-item__info__price">£2,500</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product14.png)" data-type="sets">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound Edge and Beosound 1</p>
-                            <p class="product-item__info__price">£4,150</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product15.png)" data-type="sets">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound 2 and Beosound 1</p>
-                            <p class="product-item__info__price">£2,900</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product16.png)" data-type="theatre, architectural">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beosound Shape</p>
-                            <p class="product-item__info__price">customise</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product17.png)" data-type="theatre, stereo">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beolab 18</p>
-                            <p class="product-item__info__price">£5,000</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product18.png)" data-type="theatre, stereo">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beolab 90</p>
-                            <p class="product-item__info__price">£61,000</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product19.png)" data-type="theatre, stereo">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beolab 50</p>
-                            <p class="product-item__info__price">£26,000</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product20.png)" data-type="theatre, stereo">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beolab 17</p>
-                            <p class="product-item__info__price">£3,300</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product21.png)" data-type="theatre, stereo">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beolab 19</p>
-                            <p class="product-item__info__price">£2,500</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product22.png)" data-type="stereo, theatre">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Beolab 20</p>
-                            <p class="product-item__info__price">£8,500</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product23.png)" data-type="architectural">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Celestial</p>
-                            <p class="product-item__info__price">undefined</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                    <li class="product-item" style="  background-image: url(../images/products/product24.png)" data-type="architectural">
-                        <div class="product-item__info">
-                            <p class="product-item__info__name">Palatial</p>
-                            <p class="product-item__info__price">undefined</p>
-                        </div>
-                        <div class="product-item__colors">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
+      <!-- GLOBAL NAVIGATION -->
+      <nav class="global-nav">
+        <div class="global-nav__links">
+          <a href="#">
+            <span></span>
+            <span></span>
+          </a>
+          <a href="../index.html">
+            <img src="../images/etc/logo.png" alt="logo" />
+          </a>
+          <a href="#">
+            <img src="../images/etc/icon-bag.png" alt="bag" />
+          </a>
         </div>
+      </nav>
 
-        <!-- FOOTER -->
-        <footer id="footer"></footer>
+      <!-- LOCAL NAVIGATION -->
+      <nav class="local-nav">
+        <div class="category-btn">
+          <span>Category <i class="xi-angle-down-min"></i></span>
+        </div>
+        <div class="filter-category">
+          <a href="#" class="filter-category__link selected" data-filter="*"
+            >view all</a
+          >
+          <a href="#" class="filter-category__link" data-filter="portable"
+            >portable</a
+          >
+          <a href="#" class="filter-category__link" data-filter="multiroom"
+            >multiroom</a
+          >
+          <a href="#" class="filter-category__link" data-filter="sets"
+            >speaker sets</a
+          >
+          <a href="#" class="filter-category__link" data-filter="theatre"
+            >home theatre</a
+          >
+          <a href="#" class="filter-category__link" data-filter="stereo"
+            >stereo</a
+          >
+          <a href="#" class="filter-category__link" data-filter="architectural"
+            >architectural</a
+          >
+        </div>
+      </nav>
 
+      <!-- SUBPAGE CONTENT -->
+      <div class="sub-page-content">
+        <!-- SUBPAGE TITLE -->
+        <section class="sub-page-title">
+          <div onclick="location.href='speakers.html'">speaker</div>
+          <i class="xi-angle-right-thin"></i>
+        </section>
 
-        <!-- ARROW UP -->
-        <button class="arrow-up">
-            <i class="xi-angle-up"></i>
-        </button>
+        <!-- PRODUCT LIST -->
+        <section class="product-list">
+          <ul class="product-item-wrapper">
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product01.png)"
+              onclick="location.href='#'"
+              data-type="multiroom"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beosound Edge</p>
+                <p class="product-item__info__price">£2,900</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product02.png)"
+              onclick="location.href='#'"
+              data-type="multiroom"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beosound Balance</p>
+                <p class="product-item__info__price">£1,750</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product03.png)"
+              data-type="multiroom, theatre"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beosound stage</p>
+                <p class="product-item__info__price">£1,250</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product04.png)"
+              data-type="portable"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beolit 20</p>
+                <p class="product-item__info__price">£450</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product05.png)"
+              data-type="portable, multiroom"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beosound 1</p>
+                <p class="product-item__info__price">£1,250</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product06.png)"
+              data-type="multiroom"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beosound 2</p>
+                <p class="product-item__info__price">£1,650</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product07.png)"
+              data-type="multiroom"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beoplay A9</p>
+                <p class="product-item__info__price">£2,250</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product08.png)"
+              data-type=""
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">
+                  Beogram 4000c - Recreated Limited Edition
+                </p>
+                <p class="product-item__info__price">£9,000</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product09.png)"
+              data-type="portable"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beosound A1 2nd Gen</p>
+                <p class="product-item__info__price">£200</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product10.png)"
+              data-type="multiroom"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beoplay M3</p>
+                <p class="product-item__info__price">£280</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product11.png)"
+              data-type="multiroom"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beoplay M5</p>
+                <p class="product-item__info__price">£550</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product12.png)"
+              data-type="portable"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beoplay P6</p>
+                <p class="product-item__info__price">£350</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product13.png)"
+              data-type="sets"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">
+                  Beosound Stage and Beosound 1
+                </p>
+                <p class="product-item__info__price">£2,500</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product14.png)"
+              data-type="sets"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">
+                  Beosound Edge and Beosound 1
+                </p>
+                <p class="product-item__info__price">£4,150</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product15.png)"
+              data-type="sets"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">
+                  Beosound 2 and Beosound 1
+                </p>
+                <p class="product-item__info__price">£2,900</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product16.png)"
+              data-type="theatre, architectural"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beosound Shape</p>
+                <p class="product-item__info__price">customise</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product17.png)"
+              data-type="theatre, stereo"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beolab 18</p>
+                <p class="product-item__info__price">£5,000</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product18.png)"
+              data-type="theatre, stereo"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beolab 90</p>
+                <p class="product-item__info__price">£61,000</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product19.png)"
+              data-type="theatre, stereo"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beolab 50</p>
+                <p class="product-item__info__price">£26,000</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product20.png)"
+              data-type="theatre, stereo"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beolab 17</p>
+                <p class="product-item__info__price">£3,300</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product21.png)"
+              data-type="theatre, stereo"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beolab 19</p>
+                <p class="product-item__info__price">£2,500</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product22.png)"
+              data-type="stereo, theatre"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Beolab 20</p>
+                <p class="product-item__info__price">£8,500</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product23.png)"
+              data-type="architectural"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Celestial</p>
+                <p class="product-item__info__price">undefined</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+            <li
+              class="product-item"
+              style="background-image: url(../images/products/product24.png)"
+              data-type="architectural"
+            >
+              <div class="product-item__info">
+                <p class="product-item__info__name">Palatial</p>
+                <p class="product-item__info__price">undefined</p>
+              </div>
+              <div class="product-item__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- FOOTER -->
+      <footer id="footer"></footer>
+
+      <!-- ARROW UP -->
+      <button class="arrow-up">
+        <i class="xi-angle-up"></i>
+      </button>
     </div>
-</body>
+  </body>
 </html>
