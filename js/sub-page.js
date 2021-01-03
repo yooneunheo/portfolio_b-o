@@ -4,8 +4,6 @@
   // EXPRESSION
   let yOffset = 0; // window.pageYOffset
   const filterCategory = document.querySelector(".filter-category");
-  const itemWrapper = document.querySelector(".product-item-wrapper");
-  const productItem = document.querySelectorAll(".product-item");
   const globalNavHeight = document
     .querySelector(".global-nav")
     .getBoundingClientRect().height;
@@ -34,27 +32,18 @@
     });
   }
 
-  // SCROLL EVENT
-  window.addEventListener("scroll", () => {
-    yOffset = window.pageYOffset;
-    stickyNav();
-    showArrowUp();
-  });
-
-  // RESPONSIVE NAV FOR SMALL WIDTH
-  categoryBtn.addEventListener("click", () => {
-    filterCategory.classList.toggle("show");
-  });
-
   // FUNCTION FOR FILTERING
-  filterCategory.addEventListener("click", (e) => {
+  function filtering(e) {
     const filter = e.target.dataset.filter;
+    const active = document.querySelector(".filter-category__link.selected");
+    const itemWrapper = document.querySelector(".product-item-wrapper");
+    const productItem = document.querySelectorAll(".product-item");
+
     if (filter == null) {
       return;
     }
 
     // Remove selection from the previous item and select the new one
-    const active = document.querySelector(".filter-category__link.selected");
     active.classList.remove("selected");
     e.target.classList.add("selected");
 
@@ -69,5 +58,21 @@
       });
       itemWrapper.classList.remove("ani-out");
     }, 300);
+  }
+
+  // EVENTS
+  window.addEventListener("scroll", () => {
+    yOffset = window.pageYOffset;
+    stickyNav();
+    showArrowUp();
+  });
+
+  // RESPONSIVE NAV FOR SMALL WIDTH
+  categoryBtn.addEventListener("click", () => {
+    filterCategory.classList.toggle("show");
+  });
+
+  filterCategory.addEventListener("click", (e) => {
+    filtering(e);
   });
 })();
