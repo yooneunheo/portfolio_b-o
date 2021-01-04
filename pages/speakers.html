@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/sub-page.css" />
+
     <!-- SCRIPT -->
     <script
       src="../js/sub-page.js"
@@ -29,13 +30,15 @@
   </head>
   <body>
     <div class="container">
+      <!-- Checkbox for sidebar  -->
+      <input type="checkbox" id="sidebar" />
       <!-- GLOBAL NAVIGATION -->
       <nav class="global-nav">
-        <div class="global-nav__links">
-          <a href="#">
-            <span></span>
-            <span></span>
-          </a>
+        <div class="global-nav__content">
+          <label for="sidebar">
+            <div></div>
+            <div></div>
+          </label>
           <a href="../index.html">
             <img src="../images/etc/logo.png" alt="logo" />
           </a>
@@ -44,6 +47,26 @@
           </a>
         </div>
       </nav>
+
+      <!--  SIDEBAR  -->
+      <div class="sidebar">
+        <ul class="sidebar__content">
+          <li><a href="#">Speakers</a></li>
+          <li><a href="#">Headphones</a></li>
+          <li><a href="#">Televisions</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">Gifts</a></li>
+        </ul>
+
+        <ul class="sidebar__content2">
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Login/Register</a></li>
+        </ul>
+      </div>
+      <!--  BACKGROUND BLUR  -->
+      <label for="sidebar" class="background"></label>
 
       <!-- LOCAL NAVIGATION -->
       <nav class="local-nav">

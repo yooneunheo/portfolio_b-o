@@ -9,7 +9,7 @@
     .getBoundingClientRect().height;
   const categoryBtn = document.querySelector(".category-btn");
 
-  // FUNCTION FOR STICKY NAV
+  // Make navbar sticky when it is on the top
   function stickyNav() {
     if (yOffset > globalNavHeight) {
       document.body.classList.add("sticky-nav");
@@ -18,7 +18,7 @@
     }
   }
 
-  // FUNCTION FOR ARROW UP BUTTON
+  // Show "arrow up" button when scrolling down
   function showArrowUp() {
     const arrowUp = document.querySelector(".arrow-up");
 
@@ -32,7 +32,7 @@
     });
   }
 
-  // FUNCTION FOR FILTERING
+  // Filter the categories according to the data type
   function filtering(e) {
     const filter = e.target.dataset.filter;
     const active = document.querySelector(".filter-category__link.selected");
@@ -60,14 +60,12 @@
     }, 300);
   }
 
-  // EVENTS
   window.addEventListener("scroll", () => {
     yOffset = window.pageYOffset;
     stickyNav();
     showArrowUp();
   });
 
-  // RESPONSIVE NAV FOR SMALL WIDTH
   categoryBtn.addEventListener("click", () => {
     filterCategory.classList.toggle("show");
   });
