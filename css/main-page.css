@@ -16,11 +16,15 @@ body {
 }
 
 /* MENU */
+label {
+  cursor: pointer;
+}
 #main-menu {
   position: absolute;
   top: 5%;
   right: 4%;
   cursor: pointer;
+  z-index: 20;
 }
 
 /* RIPPLE */

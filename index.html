@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/main-page.css" />
+    <link rel="stylesheet" href="css/side-bar.css" />
   </head>
 
   <body>
@@ -22,10 +23,35 @@
       <img src="images/etc/main-logo.png" alt="main logo" />
     </div>
 
+    <!-- Checkbox for sidebar  -->
+    <input type="checkbox" id="sidebar" />
     <!-- MENU -->
     <div id="main-menu">
-      <img src="images/etc/main-menu.png" alt="menu" />
+      <label for="sidebar">
+        <img src="images/etc/main-menu.png" alt="menu" />
+      </label>
     </div>
+
+    <!--  SIDEBAR  -->
+    <div class="sidebar">
+      <ul class="sidebar__content">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/speakers.html">Speakers</a></li>
+        <li><a href="#">Headphones</a></li>
+        <li><a href="#">Televisions</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">Gifts</a></li>
+      </ul>
+
+      <ul class="sidebar__content2">
+        <li><a href="#">Store Locator</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Login/Register</a></li>
+      </ul>
+    </div>
+    <!--  BACKGROUND BLUR  -->
+    <label for="sidebar" class="background"></label>
 
     <!-- RIPPLE -->
     <div class="ripple ripple1"></div>
