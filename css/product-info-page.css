@@ -1,0 +1,100 @@
+@charset 'utf-8';
+
+/* LOCAL NAVIGATION */
+/* PRODUCT INFO */
+.product-nav {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.product-nav span {
+  color: var(--color-dark-gray);
+  margin-left: 0.7em;
+}
+
+.product-nav span:nth-child(1) {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-medium);
+}
+.product-nav span:nth-child(2) {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--color-dark-gray);
+}
+
+.product-nav span:nth-child(3) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+.product-nav a {
+  margin-left: auto;
+  background-color: var(--color-dark-gray);
+  font-size: var(--font-micro);
+  color: var(--color-white);
+  padding: 0.5em 1em;
+  border-radius: 3em;
+}
+
+/* PRODUCT INFO SECTION */
+.product-info {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  text-align: center;
+  background: url(../images/etc/circle-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.product-info::before {
+  content: "";
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(transparent, #fff);
+}
+
+.product-info__text {
+  margin-top: 150px;
+  color: var(--color-dark-gray);
+}
+
+.product-info__text p:first-child {
+  font-size: var(--font-large);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.1em;
+}
+
+.product-info__text p:last-child {
+  font-size: var(--font-regular);
+  margin-top: 1em;
+}
+
+.product-info a {
+  display: inline-block;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 50%;
+  margin-top: 40px;
+  padding: 1.8em 1.3em;
+  color: var(--color-dark-gray);
+  letter-spacing: 0.05em;
+  transition: 0.4s;
+}
+
+.product-info a:hover {
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+}
