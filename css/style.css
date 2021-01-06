@@ -16,6 +16,9 @@
   --font-micro: 12px;
 
   /* FONT WEIGHT */
+  --weight-thin: 100;
+  --weight-xlight: 200;
+  --weight-light: 300;
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semi-bold: 600;

@@ -85,11 +85,6 @@ input[id="sidebar"]:checked ~ .background {
 
 /* MOBILE ( ~ 767px) */
 @media screen and (max-width: 767px) {
-  div[class="sidebar"] {
-    width: 100vw;
-    left: -100vw;
-  }
-
   .sidebar__content {
     margin: 100px 0 0 10px;
   }

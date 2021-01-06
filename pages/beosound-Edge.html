@@ -5,32 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B&O - Beosound Edge</title>
     <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- ICON -->
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
-    />
+    <link rel="stylesheet" type="text/css" href="../XEIcon/xeicon.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/sub-page.css" />
     <link rel="stylesheet" href="../css/side-bar.css" />
-    <link rel="stylesheet" href="../css/product-info-page.css">
+    <link rel="stylesheet" href="../css/sub-page.css" />
+    <link rel="stylesheet" href="../css/beosound.css">
     <!-- SCRIPT -->
-    <script
-      src="../js/sub-page.js"
-      type="text/javascript"
-      defer
-      charset="utf-8"
-    ></script>
+    <script src="../js/sub-page.js" type="text/javascript" defer></script>
+    <script src="../js/circular-slider.js" type="text/javascript" defer></script>
   </head>
   <body>
     <div class="container">
+
       <!-- Checkbox for sidebar  -->
       <input type="checkbox" id="sidebar" />
 
@@ -81,13 +72,42 @@
         </div>
       </nav>
 
-      <!-- PRODUCT INFO SECTION -->
-      <section class="product-info">
-        <div class="product-info__text">
+      <!-- SECTION : PRODUCT OVERVIEW -->
+      <section class="product-overview">
+        <div class="product-overview__text">
           <p>Beosound Edge</p>
           <p>£2,900</p>
+          <a href="#">BUY</a>
         </div>
-        <a href="#">BUY</a>
+
+        <div class="subTitle">
+          <h2>Natural</h2>
+          <h2>Anthracite</h2>
+          <h2>Bronze Tone</h2>
+          <h2>Brass Tone</h2>
+        </div>
+        
+        <div class="slide-btn">
+          <button type="button">
+            <i class="xi-angle-left-thin"></i>
+        </button>
+        <button type="button">
+            <i class="xi-angle-right-thin"></i>
+        </button>
+        </div>
+
+        <div class="circular-slide">
+          <img class="circular-slide__image" src="../images/beosound_edge/color_01.png" alt="color1" />
+        </div>
+        <div class="circular-slide">
+          <img class="circular-slide__image" src="../images/beosound_edge/color_02.png" alt="color1" />
+        </div>
+        <div class="circular-slide">
+          <img class="circular-slide__image" src="../images/beosound_edge/color_03.png" alt="color1" />
+        </div>
+        <div class="circular-slide">
+          <img class="circular-slide__image" src="../images/beosound_edge/color_04.png" alt="color1" />
+        </div>
       </section>
 
       <!-- SCROLL SECTION 0 -->
