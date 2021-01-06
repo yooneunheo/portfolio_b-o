@@ -95,7 +95,7 @@
   position: absolute;
   bottom: 2.5%;
   left: 0;
-  z-index: 999;
+  z-index: 10;
 }
 
 .slide-btn i {
@@ -130,7 +130,6 @@
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100px;
-  z-index: 30;
 }
 
 .subTitle h2 {
@@ -183,7 +182,7 @@
   }
 
   .product-overview a {
-    font-size: 9px;
+    font-size: 11px;
     margin-top: 25px;
     padding: 1.5em 1em;
     color: var(--color-dark-gray);
