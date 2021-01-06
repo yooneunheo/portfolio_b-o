@@ -117,6 +117,6 @@ label {
   }
 
   .main-title {
-    font-size: var(--font-micro);
+    font-size: var(--font-small);
   }
 }
