@@ -10,11 +10,12 @@
   const transition = 1000;
   let rotate = 0;
 
-  // AUTO REFRESH FUNCTION
   (() => {
     for (let i = 0; i < sLength; i++) {
+      // Smooth animation movement
       circularSlide[i].style.transition = `${transition / 2}ms ease`;
 
+      // When the Refresh button is pressed
       if (i === 0) {
         setTimeout(() => {
           circularSlide[
@@ -36,13 +37,13 @@
     }
   })();
 
-  // SUBTITLE SHOW
+  // Make the "subtitle" show
   function titleShow(x) {
     subTitleText[x].style.opacity = 1;
     subTitleText[x].style.top = "0%";
   }
 
-  // SUBTITLE FADE
+  // Make the "subtitle" fade
   function titleFade(x) {
     subTitleText[x].style.opacity = 0;
     subTitleText[x].style.top = "100%";
@@ -53,11 +54,11 @@
   next.addEventListener("click", nextSlider);
   prev.addEventListener("click", prevSlider);
 
-  // FUNCTION NEXT PREV BUTTON
+  // Show next slider when pressing next button
   function nextSlider() {
     let x = rotate;
+    // Prevent exceed orders when pressing the next button on the last slide
     if (x === sLength - 1) {
-      // animation
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(5deg)`;
 
       setTimeout(() => {
@@ -69,10 +70,8 @@
       setTimeout(() => {
         circularSlide[x].style.transform = `translate(-50%, -50%) rotate(0deg)`;
       }, transition);
-      // end animation
     } else {
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(-90deg)`;
-      // animation
       setTimeout(() => {
         circularSlide[
           x + 1
@@ -91,14 +90,14 @@
         ].style.transform = `translate(-50%, -50%) rotate(0deg)`;
         rotate = x + 1;
       }, transition * 1.5);
-      // end animation
     }
   }
 
+  // Show previous slider when pressing prev button
   function prevSlider() {
     let x = rotate;
+    // Prevent negative orders when pressing the previous button on the 0th slide
     if (x === 0) {
-      // animation
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(-5deg)`;
 
       setTimeout(() => {
@@ -109,11 +108,9 @@
       setTimeout(() => {
         circularSlide[x].style.transform = `translate(-50%, -50%) rotate(0deg)`;
       }, transition);
-      // end animation
     } else {
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(90deg)`;
 
-      // animation
       setTimeout(() => {
         circularSlide[
           x - 1
@@ -132,7 +129,6 @@
         ].style.transform = `translate(-50%, -50%) rotate(0deg)`;
         rotate = x - 1;
       }, transition * 1.5);
-      // end animation
     }
   }
 })();
