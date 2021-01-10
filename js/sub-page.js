@@ -1,5 +1,7 @@
 "use strict";
 
+// This js file is for elements common to subpages like navigation, arrow up, footer etc.
+
 (() => {
   // EXPRESSION
   let yOffset = 0; // window.pageYOffset

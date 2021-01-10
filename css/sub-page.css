@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+/* This css file is for elements common to subpages like navigation, arrow up, footer etc. */
+
 /* Prevent horizontal scrolling (iPhone) */
 .container {
   overflow-x: hidden;
