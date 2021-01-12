@@ -4,7 +4,7 @@
   const filterCategory = document.querySelector(".filter-category");
   const categoryBtn = document.querySelector(".category-btn");
 
-  // Filter the categories according to the data type
+  // data 타입에 따라 카테고리가 필터링 됨
   function filtering(e) {
     const filter = e.target.dataset.filter;
     const active = document.querySelector(".filter-category__link.selected");
@@ -15,7 +15,6 @@
       return;
     }
 
-    // Remove selection from the previous item and select the new one
     active.classList.remove("selected");
     e.target.classList.add("selected");
 

@@ -39,11 +39,11 @@ input[id="sidebar"]:checked ~ .background {
   z-index: 2;
 }
 
-.sidebar__content {
+.sidebar__links {
   margin: 130px 0 0 10px;
 }
 
-.sidebar__content > li > a {
+.sidebar__links > li > a {
   display: block;
   margin: 1.2em;
   font-size: var(--font-large);
@@ -51,15 +51,15 @@ input[id="sidebar"]:checked ~ .background {
   cursor: pointer;
   transition: 0.35s;
 }
-.sidebar__content > li:hover > a {
+.sidebar__links > li:hover > a {
   color: #ddd;
 }
 
-.sidebar__content2 {
+.sidebar__links2 {
   margin: 9em 0 0 1.5em;
 }
 
-.sidebar__content2 > li > a {
+.sidebar__links2 > li > a {
   display: block;
   margin: 1em;
   font-size: var(--font-regular);
@@ -67,7 +67,7 @@ input[id="sidebar"]:checked ~ .background {
   cursor: pointer;
   transition: 0.35s;
 }
-.sidebar__content2 > li:hover > a {
+.sidebar__links2 > li:hover > a {
   color: #ddd;
 }
 
@@ -78,26 +78,26 @@ input[id="sidebar"]:checked ~ .background {
     left: -100vw;
   }
 
-  .sidebar__content {
+  .sidebar__links {
     margin-top: 150px;
   }
 }
 
 /* MOBILE ( ~ 767px) */
 @media screen and (max-width: 767px) {
-  .sidebar__content {
+  .sidebar__links {
     margin: 100px 0 0 10px;
   }
 
-  .sidebar__content > li > a {
+  .sidebar__links > li > a {
     font-size: var(--font-regular);
   }
 
-  .sidebar__content2 {
+  .sidebar__links2 {
     margin: 3.5em 0 0 1em;
   }
 
-  .sidebar__content2 > li > a {
+  .sidebar__links2 > li > a {
     margin: 1em;
     font-size: var(--font-small);
   }

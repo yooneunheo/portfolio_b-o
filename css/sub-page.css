@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
-/* This css file is for elements common to subpages like navigation, arrow up, footer etc. */
+/* loading, navigation, arrow up, footer 등 서브 페이지에 공통되는 요소에 대한 CSS 파일 */
 
-/* Prevent horizontal scrolling (iPhone) */
+/* 가로 스크롤 방지 (iPhone) */
 .container {
   overflow-x: hidden;
 }

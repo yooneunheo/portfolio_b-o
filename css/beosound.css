@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 /* LOCAL NAVIGATION */
-/* PRODUCT INFO */
 .product-nav {
   max-width: 1200px;
   display: flex;
@@ -41,8 +40,8 @@
   border-radius: 3em;
 }
 
-/* SECTION 0 : PRODUCT OVERVIEW */
-#scroll-section-0 {
+/* SECTION : PRODUCT OVERVIEW */
+.product-overview {
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -55,23 +54,23 @@
   overflow: hidden;
 }
 
-.product-overview {
+.product-detail {
   margin-top: 150px;
   color: var(--color-dark-gray);
 }
 
-.product-overview p:first-child {
+.product-detail p:first-child {
   font-size: var(--font-large);
   font-weight: var(--weight-medium);
   letter-spacing: 0.1em;
   margin-bottom: 0.5em;
 }
 
-.product-overview p:last-child {
+.product-detail p:last-child {
   font-size: var(--font-regular);
 }
 
-.product-overview a {
+.product-detail a {
   display: inline-block;
   font-size: var(--font-micro);
   font-weight: var(--weight-medium);
@@ -84,7 +83,7 @@
   transition: 0.4s;
 }
 
-.product-overview a:hover {
+.product-detail a:hover {
   background-color: var(--color-dark-gray);
   color: var(--color-white);
 }
@@ -144,6 +143,85 @@
   opacity: 0;
 }
 
+/* SECTION : SCROLL ANIMATION  */
+.scroll-section {
+  position: relative;
+  padding-top: 50vh;
+}
+
+#scroll-section-1 {
+  background-color: var(--color-light-gray);
+}
+.main-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 35vh;
+  margin: 5px 0;
+  height: 3em;
+  font-size: var(--font-xlarge);
+  color: var(--color-dark-gray);
+  opacity: 0;
+}
+.main-message p {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+.main-message small {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: var(--font-small);
+}
+
+.description {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: var(--font-regular);
+  color: var(--color-dark-gray);
+  text-align: center;
+}
+
+.description strong {
+  display: block;
+  font-size: var(--font-large);
+  margin-bottom: 2em;
+}
+
+.sticky-elem-canvas {
+  top: 0;
+  height: 100%;
+}
+
+.sticky-elem-canvas canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.sticky-elem {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-5 #scroll-section-5 .sticky-elem {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.scroll-effect-end .sticky-elem {
+  /* 스크롤 섹션이 끝났을 때 normal-content 에 있는 sticky-elem을 숨긴다 */
+  display: none !important;
+}
+
+/* SECTION : NORMAL CONTENT */
+
 /* TABLET (768px ~ 1023px) */
 @media screen and (max-width: 1023px) {
 }
@@ -168,20 +246,20 @@
     font-size: 10px;
   }
 
-  .product-overview {
+  .product-detail {
     margin-top: 130px;
     color: var(--color-dark-gray);
   }
 
-  .product-overview p:first-child {
+  .product-detail p:first-child {
     font-size: var(--font-regular);
   }
 
-  .product-overview p:last-child {
+  .product-detail p:last-child {
     font-size: var(--font-small);
   }
 
-  .product-overview a {
+  .product-detail a {
     font-size: 11px;
     margin-top: 25px;
     padding: 1.5em 1em;

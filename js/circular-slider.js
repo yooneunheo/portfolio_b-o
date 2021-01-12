@@ -12,10 +12,10 @@
 
   (() => {
     for (let i = 0; i < sLength; i++) {
-      // Smooth animation movement
+      // 애니메이션 동작을 부드럽게
       circularSlide[i].style.transition = `${transition / 2}ms ease`;
 
-      // When the Refresh button is pressed
+      // 새로고침을 눌렀을 때 첫번째 슬라이드 등장
       if (i === 0) {
         setTimeout(() => {
           circularSlide[
@@ -37,27 +37,23 @@
     }
   })();
 
-  // Make the "subtitle" show
   function titleShow(x) {
     subTitleText[x].style.opacity = 1;
     subTitleText[x].style.top = "0%";
   }
 
-  // Make the "subtitle" fade
   function titleFade(x) {
     subTitleText[x].style.opacity = 0;
     subTitleText[x].style.top = "100%";
   }
 
-  // BUTTONS
   const [prev, next] = slideBtn;
   next.addEventListener("click", nextSlider);
   prev.addEventListener("click", prevSlider);
 
-  // Show next slider when pressing next button
   function nextSlider() {
     let x = rotate;
-    // Prevent exceed orders when pressing the next button on the last slide
+    // 마지막 슬라이드에서 다음 버튼을 눌렀을 때
     if (x === sLength - 1) {
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(5deg)`;
 
@@ -93,10 +89,9 @@
     }
   }
 
-  // Show previous slider when pressing prev button
   function prevSlider() {
     let x = rotate;
-    // Prevent negative orders when pressing the previous button on the 0th slide
+    // 첫번째 슬라이드에서 이전 버튼을 눌렀을 때
     if (x === 0) {
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(-5deg)`;
 

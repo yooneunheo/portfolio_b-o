@@ -1,6 +1,6 @@
 "use strict";
 
-// This js file is for elements common to subpages like navigation, arrow up, footer etc.
+// loading, navigation, arrow up, footer 등 서브 페이지에 공통되는 요소에 대한 js 파일
 
 (() => {
   // EXPRESSION
@@ -9,7 +9,7 @@
     .querySelector(".global-nav")
     .getBoundingClientRect().height;
 
-  // Make navbar sticky when it is on the top
+  // 네비게이션 바가 상단에 붙으면 sticky 됨
   function stickyNav() {
     if (yOffset > globalNavHeight) {
       document.body.classList.add("sticky-nav");
@@ -18,7 +18,7 @@
     }
   }
 
-  // Show "arrow up" button when scrolling down
+  // 스크롤 시 "arrow up" 버튼이 보임
   function showArrowUp() {
     const arrowUp = document.querySelector(".arrow-up");
 
