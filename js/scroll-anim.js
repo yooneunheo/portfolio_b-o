@@ -14,36 +14,35 @@
   const sceneInfo = [
     {
       // scene 0
+      type: "normal",
+      scrollHeight: 0,
+      objs: {
+        // DOM 요소 가져오기
+        container: document.querySelector("#scroll-section-0"),
+      },
+    },
+
+    {
+      // scene 1
       type: "sticky",
       heightNum: 5, // 브라우저 높이의 5배로 scrollHeight 세팅
       scrollHeight: 0,
       objs: {
-        // DOM 가져오기
-        container: document.querySelector("#scroll-section-0"),
+        container: document.querySelector("#scroll-section-1"),
+        messageA: document.querySelector("#scroll-section-1 .main-message.a"),
+        messageB: document.querySelector("#scroll-section-1 .main-message.b"),
+        messageC: document.querySelector("#scroll-section-1 .main-message.c"),
+        messageD: document.querySelector("#scroll-section-1 .main-message.d"),
         canvas: document.querySelector("#video-canvas-0"),
         context: document.querySelector("#video-canvas-0").getContext("2d"),
         videoImages: [],
       },
       values: {
         // 애니메이션 정보
-        videoImageCount: 300,
-        imageSequence: [0, 299],
-        canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
-      },
-    },
-    {
-      // scene 1
-      type: "sticky",
-      heightNum: 5,
-      scrollHeight: 0,
-      objs: {
-        container: document.querySelector("#scroll-section-1"),
-        messageA: document.querySelector("#scroll-section-1 .a"),
-        messageB: document.querySelector("#scroll-section-1 .b"),
-        messageC: document.querySelector("#scroll-section-1 .c"),
-        messageD: document.querySelector("#scroll-section-1 .d"),
-      },
-      values: {
+        videoImageCount: 299,
+        imageSequence: [0, 298],
+        canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
+        canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
         messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
         messageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
@@ -62,6 +61,7 @@
         messageD_translateY_out: [0, -20, { start: 0.85, end: 0.9 }],
       },
     },
+
     {
       // scene 2
       type: "sticky",
@@ -75,34 +75,32 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 200,
-        imageSequence: [0, 199],
+        videoImageCount: 199,
+        imageSequence: [0, 198],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
-        messageA_opacity_in: [0, 1, { start: 0.87, end: 0.92 }],
-        messageA_translateY_in: [20, 0, { start: 0.87, end: 0.92 }],
-        messageA_opacity_out: [1, 0, { start: 0.95, end: 1 }],
-        messageA_translateY_out: [0, -20, { start: 0.95, end: 1 }],
+        messageA_opacity_in: [0, 1, { start: 0.6, end: 0.7 }],
+        messageA_translateY_in: [20, 0, { start: 0.6, end: 0.7 }],
+        messageA_opacity_out: [1, 0, { start: 0.75, end: 0.8 }],
+        messageA_translateY_out: [0, -20, { start: 0.75, end: 0.8 }],
       },
     },
     {
       // scene 3
       type: "normal",
-      // heightNum: 5, // type normal에서는 필요 없음
       scrollHeight: 0,
       objs: {
+        // DOM 요소 가져오기
         container: document.querySelector("#scroll-section-3"),
-        content: document.querySelector("#scroll-section-3 .description"),
       },
     },
     {
       // scene 4
       type: "normal",
-      // heightNum: 5,
       scrollHeight: 0,
       objs: {
+        // DOM 요소 가져오기
         container: document.querySelector("#scroll-section-4"),
-        content: document.querySelector("#scroll-section-4 .description"),
       },
     },
     {
@@ -122,8 +120,8 @@
         imageSequence: [0, 129],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
-        messageA_opacity_in: [0, 1, { start: 0.87, end: 0.92 }],
-        messageA_translateY_in: [20, 0, { start: 0.87, end: 0.92 }],
+        messageA_opacity_in: [0, 1, { start: 0.8, end: 0.9 }],
+        messageA_translateY_in: [20, 0, { start: 0.8, end: 0.9 }],
         messageA_opacity_out: [1, 0, { start: 0.95, end: 1 }],
         messageA_translateY_out: [0, -20, { start: 0.95, end: 1 }],
       },
@@ -132,11 +130,12 @@
 
   function setCanvasImages() {
     // 캔버스에 비디오 이미지 옮겨 그리기
+
     let imgElem;
-    for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
+    for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
       imgElem = new Image();
       imgElem.src = `../video/intro/intro_${101 + i}.jpg`;
-      sceneInfo[0].objs.videoImages.push(imgElem);
+      sceneInfo[1].objs.videoImages.push(imgElem);
     }
 
     let imgElem2;
@@ -160,8 +159,7 @@
       if (sceneInfo[i].type === "sticky") {
         sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
       } else if (sceneInfo[i].type === "normal") {
-        sceneInfo[i].scrollHeight =
-          sceneInfo[i].objs.content.offsetHeight + window.innerHeight * 0.5;
+        sceneInfo[i].scrollHeight = window.innerHeight;
       }
       sceneInfo[
         i
@@ -181,7 +179,7 @@
     document.body.setAttribute("id", `show-scene-${currentScene}`);
 
     const heightRatio = window.innerHeight / 1080;
-    sceneInfo[0].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
+    sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
     sceneInfo[2].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
     sceneInfo[5].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
   }
@@ -228,15 +226,22 @@
     const scrollRatio = currentYOffset / scrollHeight;
 
     switch (currentScene) {
-      case 0:
-        // canvas의 opacity
-        objs.canvas.style.opacity = calcValues(
-          values.canvas_opacity,
-          currentYOffset,
-        );
-        break;
-
       case 1:
+        // canvas의 opacity
+        if (scrollRatio <= 0.5) {
+          // in
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_in,
+            currentYOffset,
+          );
+        } else {
+          // out
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_out,
+            currentYOffset,
+          );
+        }
+
         // message의 opacity, translateY
         if (scrollRatio <= 0.22) {
           // in
@@ -329,7 +334,7 @@
 
       case 2:
         // canvas의 opacity
-        if (scrollRatio <= 0.5) {
+        if (scrollRatio <= 0.52) {
           // in
           objs.canvas.style.opacity = calcValues(
             values.canvas_opacity_in,
@@ -344,7 +349,7 @@
         }
 
         // message의 opacity, translateY
-        if (scrollRatio <= 0.93) {
+        if (scrollRatio <= 0.75) {
           // in
           objs.messageA.style.transform = `translate3d(0, ${calcValues(
             values.messageA_translateY_in,
@@ -457,7 +462,7 @@
     delayedYOffset = delayedYOffset + (yOffset - delayedYOffset) * acc;
 
     if (!enterNewScene) {
-      if (currentScene === 0 || currentScene === 2 || currentScene === 5) {
+      if (currentScene === 1 || currentScene === 2 || currentScene === 5) {
         const currentYOffset = delayedYOffset - prevScrollHeight;
         const objs = sceneInfo[currentScene].objs;
         const values = sceneInfo[currentScene].values;
@@ -474,12 +479,12 @@
     // 페이지 맨 위로 갈 경우: scrollLoop와 첫 scene의 기본 캔버스 그리기 수행
     if (delayedYOffset < 1) {
       scrollLoop();
-      sceneInfo[0].objs.canvas.style.opacity = 1;
-      sceneInfo[0].objs.context.drawImage(
-        sceneInfo[0].objs.videoImages[0],
-        0,
-        0,
-      );
+      sceneInfo[1].objs.canvas.style.opacity = 1;
+      // sceneInfo[1].objs.context.drawImage(
+      //   sceneInfo[1].objs.videoImages[0],
+      //   0,
+      //   0,
+      // );
     }
 
     // // 페이지 맨 아래로 갈 경우: 마지막 섹션은 스크롤 계산으로 위치 및 크기를 결정해야할 요소들이 많아서 1픽셀을 움직여주는 것으로 해결
@@ -500,7 +505,6 @@
     setLayout(); // 중간에 새로고침 시, 콘텐츠 양에 따라 높이 계산에 오차가 발생하는 경우를 방지하기 위해 before-load 클래스 제거 전에도 확실하게 높이를 세팅하도록 한번 더 실행
     document.body.classList.remove("before-load");
     setLayout();
-    sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
 
     // 중간에서 새로고침 했을 경우 자동 스크롤로 제대로 그려주기
     let tempYOffset = yOffset;

@@ -40,18 +40,87 @@
   border-radius: 3em;
 }
 
-/* SECTION : PRODUCT OVERVIEW */
-.product-overview {
-  width: 100vw;
-  height: 100vh;
+/* SCROLL SECTION  */
+.scroll-section {
+  position: relative;
+}
+
+.main-message {
+  top: 45vh;
+  margin: 5px 0;
+  height: 3em;
+  font-size: var(--font-xlarge);
+  color: var(--color-dark-gray);
+  letter-spacing: 0.25em;
+  opacity: 0;
+}
+.main-message p {
+  font-weight: var(--weight-medium);
   text-align: center;
+  line-height: 1.2;
+}
+.main-message small {
+  display: block;
+  margin-bottom: 1em;
+  font-size: var(--font-small);
+}
+
+.description {
+  max-width: 700px;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: var(--font-regular);
+  color: var(--color-light-gray);
+  letter-spacing: 0.03em;
+}
+
+.description strong {
+  display: block;
+  font-size: var(--font-large);
+  margin-bottom: 1em;
+}
+
+.sticky-elem-canvas {
+  top: 0;
+  height: 100%;
+}
+
+.sticky-elem-canvas canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.sticky-elem {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-5 #scroll-section-5 .sticky-elem {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.scroll-effect-end .sticky-elem {
+  /* 스크롤 섹션이 끝났을 때 normal-content 에 있는 sticky-elem을 숨긴다 */
+  display: none !important;
+}
+
+/* SCROLL SECTION - 0 */
+#scroll-section-0 {
+  text-align: center;
+  box-sizing: border-box;
   background: url(../images/etc/circle-bg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-sizing: border-box;
-  position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .product-detail {
@@ -143,85 +212,80 @@
   opacity: 0;
 }
 
-/* SECTION : SCROLL ANIMATION  */
-.scroll-section {
-  position: relative;
-  padding-top: 50vh;
-}
-
+/* SCROLL SECTION - 1 */
 #scroll-section-1 {
-  background-color: var(--color-light-gray);
-}
-.main-message {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 35vh;
-  margin: 5px 0;
-  height: 3em;
-  font-size: var(--font-xlarge);
-  color: var(--color-dark-gray);
-  opacity: 0;
-}
-.main-message p {
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2;
-}
-.main-message small {
-  display: block;
-  margin-bottom: 0.5em;
-  font-size: var(--font-small);
+  background-color: #dadada;
 }
 
-.description {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem;
+/* SCROLL SECTION - 2 */
+#scroll-section-2 {
+  z-index: -1;
+  background: linear-gradient(180deg, #dadada 5%, #000 65%);
+}
+
+#scroll-section-2 .main-message {
+  color: var(--color-light-gray);
+}
+
+/* SCROLL SECTION - 3 */
+#scroll-section-3 {
+  margin-top: 0;
+  box-sizing: border-box;
+  background: url(../images/beosound_edge/section01.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#scroll-section-3 .description {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+/* SCROLL SECTION - 4 */
+#scroll-section-4 {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background: url(../images/beosound_edge/section02.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+#scroll-section-4 .description {
+  position: absolute;
+  top: 13%;
+  right: 4%;
+}
+
+/* SCROLL SECTION - 5 */
+.mid-message {
+  position: absolute;
+  top: 10%;
   font-size: var(--font-regular);
   color: var(--color-dark-gray);
-  text-align: center;
+  letter-spacing: 0.25em;
+  opacity: 0;
+  width: 600px;
 }
-
-.description strong {
+.mid-message p {
+  font-weight: var(--weight-medium);
+  line-height: 1.2;
+}
+.mid-message strong {
   display: block;
-  font-size: var(--font-large);
   margin-bottom: 2em;
-}
-
-.sticky-elem-canvas {
-  top: 0;
-  height: 100%;
-}
-
-.sticky-elem-canvas canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.sticky-elem {
-  display: none;
-  position: fixed;
-  left: 0;
-  width: 100%;
-}
-
-#show-scene-0 #scroll-section-0 .sticky-elem,
-#show-scene-1 #scroll-section-1 .sticky-elem,
-#show-scene-2 #scroll-section-2 .sticky-elem,
-#show-scene-5 #scroll-section-5 .sticky-elem {
-  display: block;
-  will-change: transform, opacity;
-}
-
-.scroll-effect-end .sticky-elem {
-  /* 스크롤 섹션이 끝났을 때 normal-content 에 있는 sticky-elem을 숨긴다 */
-  display: none !important;
+  font-size: var(--font-large);
 }
 
 /* SECTION : NORMAL CONTENT */
-
+.normal-content {
+  width: 100vw;
+  height: 100vh;
+}
 /* TABLET (768px ~ 1023px) */
 @media screen and (max-width: 1023px) {
 }
@@ -247,7 +311,7 @@
   }
 
   .product-detail {
-    margin-top: 130px;
+    margin-top: -270px;
     color: var(--color-dark-gray);
   }
 
