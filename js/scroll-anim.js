@@ -90,27 +90,18 @@
       type: "normal",
       scrollHeight: 0,
       objs: {
-        // DOM 요소 가져오기
         container: document.querySelector("#scroll-section-3"),
       },
+      values: {},
     },
     {
       // scene 4
-      type: "normal",
-      scrollHeight: 0,
-      objs: {
-        // DOM 요소 가져오기
-        container: document.querySelector("#scroll-section-4"),
-      },
-    },
-    {
-      // scene 5
       type: "sticky",
       heightNum: 5,
       scrollHeight: 0,
       objs: {
-        container: document.querySelector("#scroll-section-5"),
-        messageA: document.querySelector("#scroll-section-5 .a"),
+        container: document.querySelector("#scroll-section-4"),
+        messageA: document.querySelector("#scroll-section-4 .a"),
         canvas: document.querySelector("#video-canvas-2"),
         context: document.querySelector("#video-canvas-2").getContext("2d"),
         videoImages: [],
@@ -146,10 +137,10 @@
     }
 
     let imgElem3;
-    for (let i = 0; i < sceneInfo[5].values.videoImageCount; i++) {
+    for (let i = 0; i < sceneInfo[4].values.videoImageCount; i++) {
       imgElem3 = new Image();
       imgElem3.src = `../video/bass/bass_${101 + i}.jpg`;
-      sceneInfo[5].objs.videoImages.push(imgElem3);
+      sceneInfo[4].objs.videoImages.push(imgElem3);
     }
   }
 
@@ -181,7 +172,7 @@
     const heightRatio = window.innerHeight / 1080;
     sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
     sceneInfo[2].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
-    sceneInfo[5].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
+    sceneInfo[4].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
   }
 
   function calcValues(values, currentYOffset) {
@@ -372,7 +363,7 @@
         }
         break;
 
-      case 5:
+      case 4:
         // canvas의 opacity
         if (scrollRatio <= 0.5) {
           // in
@@ -462,7 +453,7 @@
     delayedYOffset = delayedYOffset + (yOffset - delayedYOffset) * acc;
 
     if (!enterNewScene) {
-      if (currentScene === 1 || currentScene === 2 || currentScene === 5) {
+      if (currentScene === 1 || currentScene === 2 || currentScene === 4) {
         const currentYOffset = delayedYOffset - prevScrollHeight;
         const objs = sceneInfo[currentScene].objs;
         const values = sceneInfo[currentScene].values;

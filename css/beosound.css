@@ -101,7 +101,8 @@
 
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
-#show-scene-5 #scroll-section-5 .sticky-elem {
+#show-scene-3 #scroll-section-3 .sticky-elem,
+#show-scene-4 #scroll-section-4 .sticky-elem {
   display: block;
   will-change: transform, opacity;
 }
@@ -229,51 +230,30 @@
 
 /* SCROLL SECTION - 3 */
 #scroll-section-3 {
-  margin-top: 0;
   box-sizing: border-box;
-  background: url(../images/beosound_edge/section01.png);
+  background: url(../images/etc/gray-background.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-#scroll-section-3 .description {
-  position: absolute;
-  top: 20%;
-  left: 5%;
 }
 
 /* SCROLL SECTION - 4 */
-#scroll-section-4 {
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-  background: url(../images/beosound_edge/section02.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-#scroll-section-4 .description {
-  position: absolute;
-  top: 13%;
-  right: 4%;
-}
-
-/* SCROLL SECTION - 5 */
 .mid-message {
-  position: absolute;
-  top: 10%;
+  top: 28vh;
+  margin: 5px 0;
   font-size: var(--font-regular);
   color: var(--color-dark-gray);
   letter-spacing: 0.25em;
   opacity: 0;
-  width: 600px;
 }
 .mid-message p {
   font-weight: var(--weight-medium);
-  line-height: 1.2;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto 3em;
+  padding: 0 1rem;
+  position: relative;
 }
 .mid-message strong {
   display: block;
