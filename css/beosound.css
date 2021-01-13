@@ -128,7 +128,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  z-index: 1;
+  z-index: 1; /* 버튼 클릭 */
 }
 
 .product-detail {
@@ -227,7 +227,7 @@
 
 /* SCROLL SECTION - 2 */
 #scroll-section-2 {
-  z-index: -1;
+  z-index: -1; /* 스크롤 섹션1 가림 방지 */
   background: linear-gradient(180deg, #dadada 5%, #000 65%);
 }
 
@@ -315,6 +315,7 @@
   height: 100vh;
 }
 
+/* background 관련 css 공통 적용 안 돼서 일일이 지정 */
 #normal-content-1 {
   background: url(../images/beosound_edge/section03.png);
   box-sizing: border-box;

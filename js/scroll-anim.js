@@ -6,9 +6,9 @@
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
   let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) 씬(scroll-section)
   let enterNewScene = false; // 새로운 scene이 시작된 순간 true
-  let acc = 0.2;
-  let delayedYOffset = 0;
-  let rafId;
+  let acc = 0.2; // 가속도
+  let delayedYOffset = 0; // 스크롤 했을 때 시작 지점
+  let rafId; // requestAnimationFrame 리턴값
   let rafState;
 
   const sceneInfo = [
@@ -180,7 +180,7 @@
       ].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
     }
 
-    // 중간에 새로고침할 때 현재 활성화된 페이지 세팅
+    // 중간에 새로고침할 때 현재 활성화된 페이지 위치에서 재세팅
     yOffset = window.pageYOffset;
     let totalScrollHeight = 0;
     for (let i = 0; i < sceneInfo.length; i++) {
@@ -192,6 +192,7 @@
     }
     document.body.setAttribute("id", `show-scene-${currentScene}`);
 
+    // 캔버스 크기 화면 높이에 맞게 세팅
     const heightRatio = window.innerHeight / 1080;
     sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
     sceneInfo[2].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
@@ -526,6 +527,7 @@
     delayedYOffset = delayedYOffset + (yOffset - delayedYOffset) * acc;
 
     if (!enterNewScene) {
+      // 캔버스가 있는 구간에 감속 효과 넣기
       if (currentScene === 1 || currentScene === 2 || currentScene === 5) {
         const currentYOffset = delayedYOffset - prevScrollHeight;
         const objs = sceneInfo[currentScene].objs;
@@ -570,7 +572,7 @@
     document.body.classList.remove("before-load");
     setLayout();
 
-    // 중간에서 새로고침 했을 경우 자동 스크롤로 제대로 그려주기
+    // 중간에서 새로고침 했을 경우 자동 스크롤을 줘서 레이아웃(스크롤 섹션의 높이) 세팅 해주기
     let tempYOffset = yOffset;
     let tempScrollCount = 0;
     if (tempYOffset > 0) {
@@ -596,13 +598,17 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 279) {
+      // resize 될 때마다 새롭게 로드 되지만 모바일은 제외. 방향 전환이 아닌 이상 reload하지 않는다.
+      // 하단바나 상태바가 유동적으로 움직이기 때문에 계속 resize가 일어나서 스크롤 진행이 안되기 때문
+      // 900 : 모바일 landscape 모드의 최대 길이
+      if (window.innerWidth > 900) {
         window.location.reload();
       }
     });
 
     window.addEventListener("orientationchange", () => {
       scrollTo(0, 0);
+      // 레이어드 세팅을 위해 바로 reload되지 않고 시간차를 줘서 reload한다.
       setTimeout(() => {
         window.location.reload();
       }, 500);
