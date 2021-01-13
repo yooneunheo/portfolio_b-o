@@ -87,21 +87,44 @@
     },
     {
       // scene 3
-      type: "normal",
+      type: "sticky",
+      heightNum: 1.5,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-3"),
+        messageA: document.querySelector("#scroll-section-3 .desc-message.a"),
       },
-      values: {},
+      values: {
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+      },
     },
     {
       // scene 4
       type: "sticky",
-      heightNum: 5,
+      heightNum: 1.5,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-4"),
-        messageA: document.querySelector("#scroll-section-4 .a"),
+        messageA: document.querySelector("#scroll-section-4 .desc-message.a"),
+      },
+      values: {
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+      },
+    },
+    {
+      // scene 5
+      type: "sticky",
+      heightNum: 5,
+      scrollHeight: 0,
+      objs: {
+        container: document.querySelector("#scroll-section-5"),
+        messageA: document.querySelector("#scroll-section-5 .a"),
         canvas: document.querySelector("#video-canvas-2"),
         context: document.querySelector("#video-canvas-2").getContext("2d"),
         videoImages: [],
@@ -113,7 +136,7 @@
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
         messageA_opacity_in: [0, 1, { start: 0.8, end: 0.9 }],
         messageA_translateY_in: [20, 0, { start: 0.8, end: 0.9 }],
-        messageA_opacity_out: [1, 0, { start: 0.95, end: 1 }],
+        messageA_opacity_out: [1, 0, { start: 0.98, end: 1 }],
         messageA_translateY_out: [0, -20, { start: 0.95, end: 1 }],
       },
     },
@@ -137,10 +160,10 @@
     }
 
     let imgElem3;
-    for (let i = 0; i < sceneInfo[4].values.videoImageCount; i++) {
+    for (let i = 0; i < sceneInfo[5].values.videoImageCount; i++) {
       imgElem3 = new Image();
       imgElem3.src = `../video/bass/bass_${101 + i}.jpg`;
-      sceneInfo[4].objs.videoImages.push(imgElem3);
+      sceneInfo[5].objs.videoImages.push(imgElem3);
     }
   }
 
@@ -172,7 +195,7 @@
     const heightRatio = window.innerHeight / 1080;
     sceneInfo[1].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
     sceneInfo[2].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
-    sceneInfo[4].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
+    sceneInfo[5].objs.canvas.style.transform = `translate3d(-50%, -50%, 0) scale(${heightRatio})`;
   }
 
   function calcValues(values, currentYOffset) {
@@ -363,7 +386,57 @@
         }
         break;
 
+      case 3:
+        // message의 opacity, translateY
+        if (scrollRatio <= 0.25) {
+          // in
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset,
+          )}%, 0)`;
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset,
+          );
+        } else {
+          // out
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_out,
+            currentYOffset,
+          )}%, 0)`;
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_out,
+            currentYOffset,
+          );
+        }
+        break;
+
       case 4:
+        // message의 opacity, translateY
+        if (scrollRatio <= 0.25) {
+          // in
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset,
+          )}%, 0)`;
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset,
+          );
+        } else {
+          // out
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_out,
+            currentYOffset,
+          )}%, 0)`;
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_out,
+            currentYOffset,
+          );
+        }
+        break;
+
+      case 5:
         // canvas의 opacity
         if (scrollRatio <= 0.5) {
           // in
@@ -380,7 +453,7 @@
         }
 
         // message의 opacity, translateY
-        if (scrollRatio <= 0.93) {
+        if (scrollRatio <= 0.83) {
           // in
           objs.messageA.style.transform = `translate3d(0, ${calcValues(
             values.messageA_translateY_in,
@@ -453,7 +526,7 @@
     delayedYOffset = delayedYOffset + (yOffset - delayedYOffset) * acc;
 
     if (!enterNewScene) {
-      if (currentScene === 1 || currentScene === 2 || currentScene === 4) {
+      if (currentScene === 1 || currentScene === 2 || currentScene === 5) {
         const currentYOffset = delayedYOffset - prevScrollHeight;
         const objs = sceneInfo[currentScene].objs;
         const values = sceneInfo[currentScene].values;

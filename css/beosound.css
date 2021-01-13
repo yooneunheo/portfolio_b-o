@@ -49,7 +49,7 @@
   top: 45vh;
   margin: 5px 0;
   height: 3em;
-  font-size: var(--font-xlarge);
+  font-size: var(--font-large);
   color: var(--color-dark-gray);
   letter-spacing: 0.25em;
   opacity: 0;
@@ -65,20 +65,26 @@
   font-size: var(--font-small);
 }
 
-.description {
-  max-width: 700px;
+.desc-message {
+  top: 15vh;
+  margin: 5px 0;
+  height: 1.5em;
+  font-size: var(--font-small);
+  color: var(--color-white);
+  letter-spacing: 0.1em;
+  opacity: 0;
+}
+.desc-message p {
+  font-weight: var(--weight-regular);
+  max-width: 35vw;
   line-height: 1.5;
   margin: 0 auto;
   padding: 0 1rem;
-  font-size: var(--font-regular);
-  color: var(--color-light-gray);
-  letter-spacing: 0.03em;
 }
-
-.description strong {
+.desc-message strong {
   display: block;
-  font-size: var(--font-large);
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  font-size: var(--font-regular);
 }
 
 .sticky-elem-canvas {
@@ -102,7 +108,8 @@
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem,
-#show-scene-4 #scroll-section-4 .sticky-elem {
+#show-scene-4 #scroll-section-4 .sticky-elem,
+#show-scene-5 #scroll-section-5 .sticky-elem {
   display: block;
   will-change: transform, opacity;
 }
@@ -229,45 +236,149 @@
 }
 
 /* SCROLL SECTION - 3 */
-#scroll-section-3 {
+#scroll-section-3,
+#scroll-section-4 {
   box-sizing: border-box;
-  background: url(../images/etc/gray-background.png);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#scroll-section-3 {
+  background-image: url(../images/beosound_edge/section01.png);
+}
+
+#scroll-section-3 p {
+  position: absolute;
+  left: 5%;
 }
 
 /* SCROLL SECTION - 4 */
+#scroll-section-4 {
+  background-image: url(../images/beosound_edge/section02.png);
+}
+
+#scroll-section-4 .desc-message {
+  top: 10vh;
+}
+
+#scroll-section-4 p {
+  position: absolute;
+  right: 3%;
+}
+
+/* SCROLL SECTION - 5 */
+#scroll-section-5 {
+  margin-bottom: 45vh;
+  background: linear-gradient(180deg, #818181 0%, #fff 100%);
+}
+
 .mid-message {
-  top: 28vh;
+  top: 15vh;
   margin: 5px 0;
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   color: var(--color-dark-gray);
-  letter-spacing: 0.25em;
+  letter-spacing: 0.1em;
   opacity: 0;
 }
 .mid-message p {
   font-weight: var(--weight-medium);
   text-align: center;
   line-height: 1.5;
-  max-width: 600px;
+  max-width: 45vw;
   margin: 0 auto 3em;
   padding: 0 1rem;
   position: relative;
 }
 .mid-message strong {
   display: block;
-  margin-bottom: 2em;
-  font-size: var(--font-large);
+  margin-bottom: 1.5em;
+  font-size: var(--font-regular);
+}
+
+.mid-message .anchor-button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid var(--color-dark-gray);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-dark-gray);
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
 }
 
 /* SECTION : NORMAL CONTENT */
 .normal-content {
+  position: relative;
   width: 100vw;
   height: 100vh;
 }
-/* TABLET (768px ~ 1023px) */
-@media screen and (max-width: 1023px) {
+
+#normal-content-1 {
+  background: url(../images/beosound_edge/section03.png);
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#normal-content-2 {
+  background: url(../images/beosound_edge/section04.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#normal-content-3 {
+  background: url(../images/beosound_edge/section05.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.description {
+  position: absolute;
+  max-width: 30vw;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: var(--font-small);
+  color: var(--color-light-gray);
+  letter-spacing: 0.1em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.description strong {
+  display: block;
+  font-size: var(--font-regular);
+  margin-bottom: 1.5em;
+}
+
+#normal-content-1 .description {
+  color: var(--color-dark-gray);
+  left: 3%;
+}
+
+#normal-content-2 .description {
+  top: 45%;
+  left: 5%;
+}
+
+#normal-content-2 .anchor-button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid var(--color-light-gray);
+  position: absolute;
+  bottom: -70px;
+  left: 10%;
+  color: var(--color-light-gray);
+  font-size: var(--font-micro);
+}
+
+#normal-content-3 .description {
+  right: 8%;
 }
 
 /* MOBILE ( ~ 767px) */
@@ -290,23 +401,49 @@
     font-size: 10px;
   }
 
+  .main-message {
+    font-size: 14px;
+  }
+  .main-message p {
+    font-weight: var(--weight-medium);
+    line-height: 1.8;
+    padding: 0.5em;
+  }
+  .main-message small {
+    display: block;
+    margin-bottom: 0.8em;
+    font-size: 10px;
+  }
+
+  .desc-message {
+    top: 10vh;
+    font-size: var(--font-micro);
+  }
+
+  .desc-message p {
+    max-width: 60vw;
+  }
+
+  .desc-message strong {
+    font-size: var(--font-small);
+  }
+
   .product-detail {
-    margin-top: -270px;
+    margin-top: 140px;
     color: var(--color-dark-gray);
   }
 
   .product-detail p:first-child {
-    font-size: var(--font-regular);
+    font-size: var(--font-small);
   }
-
   .product-detail p:last-child {
     font-size: var(--font-small);
   }
 
   .product-detail a {
-    font-size: 11px;
-    margin-top: 25px;
-    padding: 1.5em 1em;
+    font-size: 8px;
+    margin-top: 20px;
+    padding: 1.8em 1.3em;
     color: var(--color-dark-gray);
     letter-spacing: 0.05em;
     transition: 0.4s;
@@ -328,5 +465,52 @@
   .slide-btn i {
     color: var(--color-dark-gray);
     font-size: 16px;
+  }
+
+  .mid-message {
+    font-size: var(--font-micro);
+  }
+  .mid-message p {
+    max-width: 80vw;
+  }
+  .mid-message strong {
+    margin-bottom: 2em;
+    font-size: var(--font-small);
+  }
+
+  .mid-message .anchor-button {
+    font-size: 8px;
+  }
+
+  .description {
+    max-width: 55vw;
+    line-height: 1.5;
+    font-size: var(--font-micro);
+  }
+
+  .description strong {
+    font-size: var(--font-small);
+    margin-bottom: 2em;
+  }
+
+  #normal-content-1 .description {
+    left: 0%;
+  }
+
+  #normal-content-2 .description {
+    top: 43%;
+    left: 0%;
+  }
+
+  #normal-content-2 .anchor-button {
+    bottom: -70px;
+    left: 10%;
+    color: var(--color-light-gray);
+    font-size: 8px;
+  }
+
+  #normal-content-3 .description {
+    text-align: right;
+    right: 0%;
   }
 }
