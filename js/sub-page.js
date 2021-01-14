@@ -1,6 +1,6 @@
 "use strict";
 
-// loading, navigation, arrow up, footer 등 서브 페이지에 공통되는 요소에 대한 js 파일
+// navigation, arrow up, footer 등 서브 페이지에 공통되는 요소에 대한 js 파일
 
 (() => {
   // EXPRESSION

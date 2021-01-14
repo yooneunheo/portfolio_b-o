@@ -1,5 +1,77 @@
 @charset 'utf-8';
 
+/* loading */
+.before-load {
+  overflow: hidden;
+}
+
+/* setLayout이 실행을 끝내기 전(스크롤 섹션이 제대로 세팅되기 전)에는 다 안 보이게 한 다음 세팅이 완료되면 다같이 보이게 */
+.before-load .container {
+  display: none;
+}
+
+.before-load .loading {
+  opacity: 1;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.loading span {
+  display: block;
+  position: relative;
+  background-color: var(--color-dark-gray);
+  height: 70px;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+  50% {
+    height: 15px;
+  }
+
+  100% {
+    height: 70px;
+  }
+}
+
+.loading span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loading span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.loading span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.loading span:nth-child(6) {
+  animation-delay: 0.2s;
+}
+.loading span:nth-child(7) {
+  animation-delay: 0s;
+}
+
 /* LOCAL NAVIGATION */
 .product-nav {
   max-width: 1200px;
@@ -206,6 +278,7 @@
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100px;
+  z-index: 3;
 }
 
 .subTitle h2 {
@@ -384,6 +457,22 @@
 
 /* MOBILE ( ~ 767px) */
 @media screen and (max-width: 767px) {
+  .loading span {
+    height: 50px;
+    width: 8px;
+    margin: 0 3px;
+  }
+
+  @keyframes loading {
+    50% {
+      height: 10px;
+    }
+
+    100% {
+      height: 50px;
+    }
+  }
+
   .product-nav {
     padding: 0;
   }

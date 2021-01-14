@@ -75,8 +75,8 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 199,
-        imageSequence: [0, 198],
+        videoImageCount: 100,
+        imageSequence: [0, 99],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
         messageA_opacity_in: [0, 1, { start: 0.6, end: 0.7 }],
@@ -130,14 +130,14 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 130,
-        imageSequence: [0, 129],
+        videoImageCount: 97,
+        imageSequence: [0, 96],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
-        canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
+        canvas_opacity_out: [1, 0, { start: 0.97, end: 1 }],
         messageA_opacity_in: [0, 1, { start: 0.8, end: 0.9 }],
         messageA_translateY_in: [20, 0, { start: 0.8, end: 0.9 }],
-        messageA_opacity_out: [1, 0, { start: 0.98, end: 1 }],
-        messageA_translateY_out: [0, -20, { start: 0.95, end: 1 }],
+        messageA_opacity_out: [1, 0, { start: 0.9, end: 1 }],
+        messageA_translateY_out: [0, -20, { start: 0.97, end: 1 }],
       },
     },
   ];
@@ -542,22 +542,22 @@
     }
 
     // 일부 기기에서 페이지 끝으로 고속 이동하면 body id가 제대로 인식 안되는 경우를 해결
-    // 페이지 맨 위로 갈 경우: scrollLoop와 첫 scene의 기본 캔버스 그리기 수행
+    // 페이지 맨 위로 갈 경우: scrollLoop와 첫번쨰 캔버스 그리기 수행
     if (delayedYOffset < 1) {
       scrollLoop();
       sceneInfo[1].objs.canvas.style.opacity = 1;
-      // sceneInfo[1].objs.context.drawImage(
-      //   sceneInfo[1].objs.videoImages[0],
-      //   0,
-      //   0,
-      // );
+      sceneInfo[1].objs.context.drawImage(
+        sceneInfo[1].objs.videoImages[0],
+        0,
+        0,
+      );
     }
 
-    // // 페이지 맨 아래로 갈 경우: 마지막 섹션은 스크롤 계산으로 위치 및 크기를 결정해야할 요소들이 많아서 1픽셀을 움직여주는 것으로 해결
-    // if (document.body.offsetHeight - window.innerHeight - delayedYOffset < 1) {
-    //   let tempYOffset = yOffset;
-    //   scrollTo(0, tempYOffset - 1);
-    // }
+    // 페이지 맨 아래로 갈 경우: 마지막 섹션은 스크롤 계산으로 위치 및 크기를 결정해야할 요소들이 많아서 1픽셀을 움직여주는 것으로 해결
+    if (document.body.offsetHeight - window.innerHeight - delayedYOffset < 1) {
+      let tempYOffset = yOffset;
+      scrollTo(0, tempYOffset - 1);
+    }
 
     rafId = requestAnimationFrame(loop);
 
@@ -568,9 +568,12 @@
   }
 
   window.addEventListener("load", () => {
-    setLayout(); // 중간에 새로고침 시, 콘텐츠 양에 따라 높이 계산에 오차가 발생하는 경우를 방지하기 위해 before-load 클래스 제거 전에도 확실하게 높이를 세팅하도록 한번 더 실행
+    // 중간에 새로고침 시, 콘텐츠 양에 따라 높이 계산에 오차가 발생하는 경우를 방지하기 위해 before-load 클래스 제거 전에도 확실하게 높이를 세팅하도록 한번 더 실행
+    setLayout();
+    // setLayout이 실행을 끝내기 전(스크롤 섹션이 제대로 세팅되기 전)에는 다 안 보이게 한 다음(display: none), 레이아웃 세팅이 완료되면 다같이 동시에 보이도록
     document.body.classList.remove("before-load");
     setLayout();
+    sceneInfo[1].objs.context.drawImage(sceneInfo[1].objs.videoImages[0], 0, 0);
 
     // 중간에서 새로고침 했을 경우 자동 스크롤을 줘서 레이아웃(스크롤 섹션의 높이) 세팅 해주기
     let tempYOffset = yOffset;
@@ -613,6 +616,12 @@
         window.location.reload();
       }, 500);
     });
+
+    document
+      .querySelector(".loading")
+      .addEventListener("transitionend", (e) => {
+        document.body.removeChild(e.currentTarget);
+      });
   });
 
   setCanvasImages();

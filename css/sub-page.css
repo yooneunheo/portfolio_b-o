@@ -1,6 +1,10 @@
 @charset 'utf-8';
 
-/* loading, navigation, arrow up, footer 등 서브 페이지에 공통되는 요소에 대한 CSS 파일 */
+/* navigation, arrow up, footer 등 서브 페이지에 공통되는 요소에 대한 CSS 파일 */
+
+a {
+  cursor: pointer;
+}
 
 /* 가로 스크롤 방지 (iPhone) */
 .container {
@@ -64,8 +68,9 @@ input[id="sidebar"]:checked + .global-nav label div:nth-child(2) {
   width: 100%;
   height: 44px;
   padding: 0 1rem;
-  border-top: 1px solid var(--color-light-gray);
-  border-bottom: 1px solid var(--color-light-gray);
+  border: 1px solid var(--color-light-gray);
+  border-left: 0;
+  border-right: 0;
   z-index: 10;
 }
 
@@ -78,6 +83,206 @@ input[id="sidebar"]:checked + .global-nav label div:nth-child(2) {
   -moz-backdrop-filter: saturate(180%) blur(15px);
   -o-backdrop-filter: saturate(180%) blur(15px);
   backdrop-filter: saturate(180%) blur(15px);
+}
+
+/* FOOTER */
+#footer {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  padding: 2em 1em;
+  background-color: #fafafa;
+}
+
+.footer-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+  padding: 0 1em;
+}
+
+.footer-section1 {
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: block;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  width: 55px;
+}
+
+.country-menu,
+.lang-menu {
+  position: relative;
+}
+
+.selected-country,
+.selected-lang {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-dark-gray);
+  margin-top: 6px;
+  line-height: 28px;
+}
+.selected-country {
+  width: 85px;
+}
+
+.selected-lang {
+  width: 95px;
+}
+
+.selected-country::before,
+.selected-lang::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+}
+
+.selected-country::before {
+  background-image: url("../images/etc/flag_korea.png");
+}
+
+.selected-lang::before {
+  background-image: url("../images/etc/flag_usa.png");
+}
+
+.country-menu ul,
+.lang-menu ul {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0 1px 10px rgb(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: none;
+  transition: all 0.5s;
+  position: absolute;
+  top: 50px;
+  left: -10px;
+  z-index: 1;
+}
+
+.country-menu:hover ul,
+.lang-menu:hover ul {
+  display: block;
+}
+
+.country-menu li,
+.lang-menu li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-menu a,
+.lang-menu a {
+  width: 140px;
+  display: block;
+  padding: 5px 10px;
+}
+
+.country-menu a::before,
+.lang-menu a::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+.country-menu a:hover,
+.lang-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+.cn::before {
+  background-image: url("../images/etc/flag_china.png");
+}
+
+.dn::before {
+  background-image: url("../images/etc/flag_denmark.png");
+}
+
+.kr::before {
+  background-image: url("../images/etc/flag_korea.png");
+}
+
+.us::before {
+  background-image: url("../images/etc/flag_usa.png");
+}
+
+input[id*="footer__"] {
+  display: none;
+}
+
+.country-menu,
+.lang-menu,
+input[id*="footer__"] + label {
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+  font-size: 13px;
+  font-weight: var(--weight-medium);
+}
+
+input[id*="footer__"] + label i {
+  display: none;
+}
+
+input[id*="footer__"] + label + div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5em;
+}
+
+input[id*="footer__"] + label + div a {
+  font-size: var(--font-micro);
+  margin: 0.3em;
+}
+
+input[id*="footer__"] + label + div a:hover {
+  color: var(--color-gray);
+}
+
+.sns {
+  margin: 3em 0 2em;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sns i {
+  font-size: 20px;
+}
+
+.sns i:hover {
+  color: var(--color-gray);
+}
+
+.copyright {
+  font-size: var(--font-micro);
+  text-align: center;
+  color: var(--color-gray);
+  margin: 3em 0 1em;
 }
 
 /* ARROW UP */
@@ -101,6 +306,11 @@ input[id="sidebar"]:checked + .global-nav label div:nth-child(2) {
 
 /* MOBILE ( ~ 767px) */
 @media screen and (max-width: 767px) {
+  #footer {
+    margin-top: 50px;
+    padding: 1em;
+  }
+
   input[id="sidebar"] + .global-nav label {
     width: 25px;
     height: 8px;
@@ -119,5 +329,77 @@ input[id="sidebar"]:checked + .global-nav label div:nth-child(2) {
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
+  }
+
+  .footer-wrapper {
+    padding: 0;
+  }
+
+  .footer-list {
+    display: block;
+    margin-top: 0;
+  }
+
+  .footer-section1 {
+    display: flex;
+    height: 100%;
+    margin: 20px 0;
+  }
+
+  .country-menu {
+    margin-bottom: 30px;
+  }
+
+  .lang-menu {
+    margin-bottom: 0;
+  }
+
+  input[id*="footer__"] + label {
+    display: block;
+    padding: 0.8em 0;
+    font-size: var(--font-micro);
+    cursor: pointer;
+    position: relative;
+  }
+
+  input[id*="footer__"] + label i {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    margin-left: 0.5em;
+    transition: all 0.35s;
+  }
+
+  input[id*="footer__"]:checked + label i {
+    transform: rotate(540deg);
+  }
+
+  input[id*="footer__"] + label + div {
+    max-height: 0;
+    transition: all 0.35s;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-gray);
+    padding-top: 0;
+  }
+
+  input[id*="footer__"]:checked + label + div {
+    max-height: 200px;
+    padding: 0.5em;
+    border-top: 1px solid var(--color-light-gray);
+  }
+
+  input[id*="footer__"] + label + div a {
+    font-size: var(--font-micro);
+    margin: 0.5em 0;
+  }
+
+  .sns {
+    margin: 2em 0;
+  }
+
+  .copyright {
+    font-size: 10px;
   }
 }
