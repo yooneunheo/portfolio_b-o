@@ -211,17 +211,18 @@
   .filter-category__link:hover {
     background-color: #ccc;
   }
-}
-.sub-page-title {
-  font-size: var(--font-regular);
-  padding: 1.5em;
-}
 
-.product-item {
-  width: 47%;
-  margin: 1.5%;
-  padding-bottom: 55%;
-  background-size: 70%;
+  .sub-page-title {
+    font-size: var(--font-regular);
+    padding: 1.5em;
+  }
+
+  .product-item {
+    width: 47%;
+    margin: 1.5%;
+    padding-bottom: 55%;
+    background-size: 70%;
+  }
 }
 
 /* MOBILE ( ~ 767px) */

@@ -6,10 +6,10 @@
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
   let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) 씬(scroll-section)
   let enterNewScene = false; // 새로운 scene이 시작된 순간 true
-  let acc = 0.2; // 가속도
   let delayedYOffset = 0; // 스크롤 했을 때 시작 지점
   let rafId; // requestAnimationFrame 리턴값
   let rafState;
+  const acc = 0.2; // 가속도
 
   const sceneInfo = [
     {
@@ -95,10 +95,10 @@
         messageA: document.querySelector("#scroll-section-3 .desc-message.a"),
       },
       values: {
-        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
-        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+        messageA_opacity_in: [0, 1, { start: 0, end: 0.2 }],
+        messageA_translateY_in: [20, 0, { start: 0, end: 0.2 }],
+        messageA_opacity_out: [1, 0, { start: 0.5, end: 0.7 }],
+        messageA_translateY_out: [0, -20, { start: 0.5, end: 0.7 }],
       },
     },
     {
@@ -111,10 +111,10 @@
         messageA: document.querySelector("#scroll-section-4 .desc-message.a"),
       },
       values: {
-        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
-        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
-        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
+        messageA_opacity_in: [0, 1, { start: 0, end: 0.2 }],
+        messageA_translateY_in: [20, 0, { start: 0, end: 0.2 }],
+        messageA_opacity_out: [1, 0, { start: 0.5, end: 0.7 }],
+        messageA_translateY_out: [0, -20, { start: 0.5, end: 0.7 }],
       },
     },
     {
@@ -389,7 +389,7 @@
 
       case 3:
         // message의 opacity, translateY
-        if (scrollRatio <= 0.25) {
+        if (scrollRatio <= 0.35) {
           // in
           objs.messageA.style.transform = `translate3d(0, ${calcValues(
             values.messageA_translateY_in,
@@ -414,7 +414,7 @@
 
       case 4:
         // message의 opacity, translateY
-        if (scrollRatio <= 0.25) {
+        if (scrollRatio <= 0.35) {
           // in
           objs.messageA.style.transform = `translate3d(0, ${calcValues(
             values.messageA_translateY_in,
@@ -439,7 +439,7 @@
 
       case 5:
         // canvas의 opacity
-        if (scrollRatio <= 0.5) {
+        if (scrollRatio <= 0.25) {
           // in
           objs.canvas.style.opacity = calcValues(
             values.canvas_opacity_in,
