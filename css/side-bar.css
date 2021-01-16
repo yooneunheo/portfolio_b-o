@@ -6,7 +6,7 @@ input[id="sidebar"] {
 }
 
 /*  SIDEBAR  */
-div[class="sidebar"] {
+.sidebar {
   width: 400px;
   height: 100vh;
   background: #fff;
@@ -46,7 +46,7 @@ input[id="sidebar"]:checked ~ .background {
 }
 
 .sidebar__links {
-  margin: 6em 1em 4em;
+  margin: 5em 1em 3em;
 }
 
 .sidebar__links2 {
@@ -61,7 +61,7 @@ input[id="sidebar"]:checked ~ .background {
 }
 
 .sidebar__links > li > a {
-  margin: 0.7em;
+  margin: 0.5em;
   font-size: var(--font-large);
 }
 

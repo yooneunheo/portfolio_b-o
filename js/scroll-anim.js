@@ -97,8 +97,8 @@
       values: {
         messageA_opacity_in: [0, 1, { start: 0, end: 0.2 }],
         messageA_translateY_in: [20, 0, { start: 0, end: 0.2 }],
-        messageA_opacity_out: [1, 0, { start: 0.5, end: 0.7 }],
-        messageA_translateY_out: [0, -20, { start: 0.5, end: 0.7 }],
+        messageA_opacity_out: [1, 0, { start: 0.4, end: 0.6 }],
+        messageA_translateY_out: [0, -20, { start: 0.4, end: 0.6 }],
       },
     },
     {
@@ -113,8 +113,8 @@
       values: {
         messageA_opacity_in: [0, 1, { start: 0, end: 0.2 }],
         messageA_translateY_in: [20, 0, { start: 0, end: 0.2 }],
-        messageA_opacity_out: [1, 0, { start: 0.5, end: 0.7 }],
-        messageA_translateY_out: [0, -20, { start: 0.5, end: 0.7 }],
+        messageA_opacity_out: [1, 0, { start: 0.4, end: 0.6 }],
+        messageA_translateY_out: [0, -20, { start: 0.4, end: 0.6 }],
       },
     },
     {
