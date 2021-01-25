@@ -1,6 +1,7 @@
 "use strict";
 
 (() => {
+  // EXPRESSION
   const mark = document.querySelector(".mark");
   const link = document.querySelectorAll(".filter-category__link");
   const filterCategory = document.querySelector(".filter-category");

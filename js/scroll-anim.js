@@ -143,7 +143,7 @@
   ];
 
   function setCanvasImages() {
-    // 캔버스에 비디오 이미지 옮겨 그리기
+    // 캔버스에 쓸 비디오 이미지 옮겨오기
 
     let imgElem;
     for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
