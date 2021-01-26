@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 
 html {
   font-family: "Montserrat", sans-serif;
@@ -128,22 +129,59 @@ ol,
 ul,
 li {
   list-style: none;
+  text-decoration: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* ------------ user custom -------------- */
 img {
   max-width: 100%;
   height: auto;
   border: 0;
 }
+
 button {
   border: 0;
+  outline: 0;
   background: transparent;
   cursor: pointer;
 }
 
 a {
+  text-decoration: none;
+  color: var(--color-dark-gray);
   cursor: pointer;
 }
+
+/* 가로 스크롤 방지 */
+.container {
+  overflow-x: hidden;
+}
+
+:root {
+  /* color */
+  --color-white: #fafafa;
+  --color-light-gray: #dbdbdb;
+  --color-gray: #a4a4a4;
+  --color-dark-gray: #707070;
+
+  /* font size */
+  --font-xlarge: 30px;
+  --font-large: 25px;
+  --font-regular: 18px;
+  --font-small: 15px;
+  --font-micro: 12px;
+
+  /* font weight */
+  --weight-thin: 100;
+  --weight-xlight: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+}
+/* ------------ end of user custom -------------- */

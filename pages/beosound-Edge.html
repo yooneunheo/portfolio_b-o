@@ -4,29 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B&O - Beosound Edge</title>
-    <!-- CACHE-CONTROL -->
+    <!-- cache control -->
     <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
-    <!-- FULL-SCREEN -->
+    <!-- full screen mode -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ICON -->
+    <!-- icon -->
     <link rel="stylesheet" type="text/css" href="../XEIcon/xeicon.min.css" />
-    <!-- CSS -->
+    <!-- css -->
     <link rel="stylesheet" href="../css/default.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/side-bar.css" />
     <link rel="stylesheet" href="../css/sub-page.css" />
     <link rel="stylesheet" href="../css/beosound.css" />
-    <!-- SCRIPT -->
+    <!-- script -->
     <script src="../js/sub-page.js" type="text/javascript" defer></script>
     <script
       src="../js/circular-slider.js"
@@ -35,6 +27,7 @@
     ></script>
     <script src="../js/scroll-anim.js" type="text/javascript" defer></script>
   </head>
+  <!-- loading -->
   <body class="before-load">
     <div class="loading">
       <span></span>
@@ -45,49 +38,56 @@
       <span></span>
       <span></span>
     </div>
+    <!-- end of loading -->
 
     <div class="container">
-      <!-- Checkbox for sidebar  -->
-      <input type="checkbox" id="sidebar" />
+      <!-- sidebar  -->
+      <div class="sidebar-overlay">
+        <div class="sidebar">
+          <span class="sidebar__close">
+            <i class="xi-close-thin"></i>
+          </span>
+          <ul class="sidebar__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="category-page.html">Speakers</a></li>
+            <li><a>Headphones</a></li>
+            <li><a>Televisions</a></li>
+            <li><a>Accessories</a></li>
+            <li><a>Stories</a></li>
+            <li><a>Gifts</a></li>
+          </ul>
+          <ul class="sidebar__links2">
+            <li><a>Store Locator</a></li>
+            <li><a>Support</a></li>
+            <li><a>Login/Register</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- end of sidebar  -->
 
-      <!-- GLOBAL NAVIGATION -->
+      <!-- global navbar -->
       <nav class="global-nav">
-        <div class="global-nav__content">
-          <label for="sidebar">
+        <div class="global-nav-center">
+          <div class="menu-bar">
             <div></div>
             <div></div>
-          </label>
-          <a href="../index.html">
-            <img src="../images/etc/logo.png" alt="logo" />
-          </a>
-          <a>
-            <img src="../images/etc/icon-bag.png" alt="bag" />
-          </a>
+          </div>
+          <img
+            src="../images/etc/logo.png"
+            alt="logo"
+            onclick="location.href='../index.html'"
+          />
+          <div class="cart-btn">
+            <span class="cart-icon">
+              <i class="xi-cart-add"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div>
         </div>
       </nav>
+      <!-- end of global navbar -->
 
-      <!-- SIDEBAR  -->
-      <div class="sidebar">
-        <ul class="sidebar__links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a>Headphones</a></li>
-          <li><a>Televisions</a></li>
-          <li><a>Accessories</a></li>
-          <li><a>Stories</a></li>
-          <li><a>Gifts</a></li>
-        </ul>
-        <ul class="sidebar__links2">
-          <li><a>Store Locator</a></li>
-          <li><a>Support</a></li>
-          <li><a>Login/Register</a></li>
-        </ul>
-      </div>
-
-      <!--  BACKGROUND BLUR  -->
-      <label for="sidebar" class="background"></label>
-
-      <!-- LOCAL NAVIGATION -->
+      <!-- local navbar-->
       <nav class="local-nav">
         <div class="product-nav">
           <span>Beosound Edge</span>
@@ -96,14 +96,15 @@
           <a>SHOP</a>
         </div>
       </nav>
+      <!-- end of local navbar-->
 
-      <!-- SCROLL SECTION 0 -->
+      <!-- scroll section 0 -->
       <section class="scroll-section" id="scroll-section-0">
         <div class="content">
           <div class="product-detail">
             <p>Beosound Edge</p>
             <p>£2,900</p>
-            <a>BUY</a>
+            <a>experience in store</a>
           </div>
 
           <div class="subTitle">
@@ -152,8 +153,9 @@
           </div>
         </div>
       </section>
+      <!-- end of scroll section 0 -->
 
-      <!-- SCROLL SECTION 1 -->
+      <!-- scroll section 1 -->
       <section class="scroll-section" id="scroll-section-1">
         <div class="sticky-elem sticky-elem-canvas">
           <canvas id="video-canvas-0" width="1920" height="1080"></canvas>
@@ -174,8 +176,9 @@
           </p>
         </div>
       </section>
+      <!-- end of scroll section 1 -->
 
-      <!-- SCROLL SECTION 2 -->
+      <!-- scroll section 2 -->
       <section class="scroll-section" id="scroll-section-2">
         <div class="sticky-elem sticky-elem-canvas">
           <canvas id="video-canvas-1" width="1920" height="1080"></canvas>
@@ -187,8 +190,9 @@
           </p>
         </div>
       </section>
+      <!-- end of scroll section 2 -->
 
-      <!-- SCROLL SECTION 3 -->
+      <!-- scroll section 3 -->
       <section class="scroll-section" id="scroll-section-3">
         <div class="sticky-elem desc-message a">
           <p>
@@ -200,8 +204,9 @@
           </p>
         </div>
       </section>
+      <!-- end of scroll section 3 -->
 
-      <!-- SCROLL SECTION 4 -->
+      <!-- scroll section 4 -->
       <section class="scroll-section" id="scroll-section-4">
         <div class="sticky-elem desc-message a">
           <p>
@@ -213,8 +218,9 @@
           </p>
         </div>
       </section>
+      <!-- end of scroll section 4 -->
 
-      <!-- SCROLL SECTION 5 -->
+      <!-- scroll section 5 -->
       <section class="scroll-section" id="scroll-section-5">
         <div class="sticky-elem sticky-elem-canvas">
           <canvas id="video-canvas-2" width="1920" height="1080"></canvas>
@@ -231,8 +237,9 @@
           <a class="anchor-button">EXPERIENCE IN STORE</a>
         </div>
       </section>
+      <!-- end of scroll section 5 -->
 
-      <!-- NORMAL CONTENT 1 -->
+      <!-- normal content 1 -->
       <section class="normal-content" id="normal-content-1">
         <p class="description">
           <strong>Defy gravity</strong>
@@ -242,8 +249,9 @@
           the volume.
         </p>
       </section>
+      <!-- end of normal content 1 -->
 
-      <!-- NORMAL CONTENT 2 -->
+      <!-- normal content 2 -->
       <section class="normal-content" id="normal-content-2">
         <p class="description">
           <strong>HOME SPEAKER SYSTEMS</strong>
@@ -254,8 +262,9 @@
           <a class="anchor-button">LEARN MORE</a>
         </p>
       </section>
+      <!-- end of normal content 2 -->
 
-      <!-- NORMAL CONTENT 3 -->
+      <!-- normal content 3 -->
       <section class="normal-content" id="normal-content-3">
         <p class="description">
           <strong>Music for you, me and everyone</strong>
@@ -267,8 +276,9 @@
           room.
         </p>
       </section>
+      <!-- end of normal content 3 -->
 
-      <!-- FOOTER -->
+      <!-- footer -->
       <footer id="footer">
         <div class="footer-wrapper">
           <img
@@ -301,16 +311,16 @@
                 <div class="selected-lang">English</div>
                 <ul>
                   <li>
-                    <a class="cn">China</a>
+                    <a class="cn">Chinese</a>
                   </li>
                   <li>
-                    <a class="dn">Denmark</a>
+                    <a class="dn">dansk</a>
                   </li>
                   <li>
-                    <a class="kr">Korea</a>
+                    <a class="kr">Korean</a>
                   </li>
                   <li>
-                    <a class="us">USA</a>
+                    <a class="us">English</a>
                   </li>
                 </ul>
               </div>
@@ -367,11 +377,13 @@
           <div class="copyright">© Bang & Olufsen 2021</div>
         </div>
       </footer>
+      <!-- end of footer -->
 
-      <!-- ARROW UP -->
+      <!-- arrow up -->
       <button class="arrow-up">
         <i class="xi-angle-up"></i>
       </button>
+      <!-- end of arrow up -->
     </div>
   </body>
 </html>

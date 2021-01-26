@@ -4,78 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bang & Olufsen</title>
-    <!-- CACHE-CONTROL -->
+    <!-- cache control -->
     <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
-    <!-- FULL-SCREEN -->
+    <!-- full screen mode -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ICON -->
+    <!-- icon -->
     <link rel="stylesheet" type="text/css" href="../XEIcon/xeicon.min.css" />
-    <!-- CSS -->
+    <!-- css -->
     <link rel="stylesheet" href="css/default.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/side-bar.css" />
-    <link rel="stylesheet" href="css/main-page.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- script -->
+    <script src="js/index.js" defer></script>
   </head>
 
   <body>
-    <!-- LOGO -->
+    <!-- logo -->
     <div id="main-logo">
       <img src="images/etc/main-logo.png" alt="main logo" />
     </div>
+    <!-- end of logo -->
 
-    <!-- Checkbox for sidebar  -->
-    <input type="checkbox" id="sidebar" />
-
-    <!-- MENU -->
+    <!-- menu -->
     <div id="main-menu">
-      <label for="sidebar">
-        <img src="images/etc/main-menu.png" alt="menu" />
-      </label>
+      <img src="images/etc/main-menu.png" alt="menu" />
     </div>
+    <!-- end of menu -->
 
-    <!--  SIDEBAR  -->
-    <div class="sidebar">
-      <ul class="sidebar__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/speakers.html">Speakers</a></li>
-        <li><a>Headphones</a></li>
-        <li><a>Televisions</a></li>
-        <li><a>Accessories</a></li>
-        <li><a>Stories</a></li>
-        <li><a>Gifts</a></li>
-      </ul>
-      <ul class="sidebar__links2">
-        <li><a>Store Locator</a></li>
-        <li><a>Support</a></li>
-        <li><a>Login/Register</a></li>
-      </ul>
+    <!-- sidebar  -->
+    <div class="sidebar-overlay">
+      <div class="sidebar">
+        <span class="sidebar__close">
+          <i class="xi-close-thin"></i>
+        </span>
+        <ul class="sidebar__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/category-page.html">Speakers</a></li>
+          <li><a>Headphones</a></li>
+          <li><a>Televisions</a></li>
+          <li><a>Accessories</a></li>
+          <li><a>Stories</a></li>
+          <li><a>Gifts</a></li>
+        </ul>
+        <ul class="sidebar__links2">
+          <li><a>Store Locator</a></li>
+          <li><a>Support</a></li>
+          <li><a>Login/Register</a></li>
+        </ul>
+      </div>
     </div>
+    <!-- end of sidebar  -->
 
-    <!--  BACKGROUND BLUR  -->
-    <label for="sidebar" class="background"></label>
-
-    <!-- RIPPLE -->
+    <!-- ripple -->
     <div class="ripple ripple1"></div>
     <div class="ripple ripple2"></div>
     <div class="ripple ripple3"></div>
     <div class="ripple ripple4"></div>
+    <!-- end of ripple -->
 
-    <!-- TITLE -->
+    <!-- title -->
     <div class="main-title">
       <div class="main-title__text">
         The <br />Essence <br />
         of sound
       </div>
     </div>
+    <!-- end of title -->
   </body>
 </html>

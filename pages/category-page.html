@@ -4,76 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bang & Olufsen - Speaker</title>
-    <!-- CACHE-CONTROL -->
+    <!-- cache control -->
     <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
     <meta http-equiv="Expires" content="-1" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
-    <!-- FULL-SCREEN -->
+    <!-- full screen mode -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ICON -->
+    <!-- icon -->
     <link rel="stylesheet" type="text/css" href="../XEIcon/xeicon.min.css" />
-    <!-- CSS -->
+    <!-- css -->
     <link rel="stylesheet" href="../css/default.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/side-bar.css" />
     <link rel="stylesheet" href="../css/sub-page.css" />
-    <link rel="stylesheet" href="../css/speakers.css" />
-
-    <!-- SCRIPT -->
+    <link rel="stylesheet" href="../css/category-page.css" />
+    <!-- script -->
     <script src="../js/sub-page.js" type="text/javascript" defer></script>
-    <script src="../js/speakers.js" type="text/javascript" defer></script>
+    <script src="../js/category-page.js" type="text/javascript" defer></script>
   </head>
+
   <body>
     <div class="container">
-      <!-- Checkbox for sidebar  -->
-      <input type="checkbox" id="sidebar" />
+      <!-- sidebar  -->
+      <div class="sidebar-overlay">
+        <div class="sidebar">
+          <span class="sidebar__close">
+            <i class="xi-close-thin"></i>
+          </span>
+          <ul class="sidebar__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="category-page.html">Speakers</a></li>
+            <li><a>Headphones</a></li>
+            <li><a>Televisions</a></li>
+            <li><a>Accessories</a></li>
+            <li><a>Stories</a></li>
+            <li><a>Gifts</a></li>
+          </ul>
+          <ul class="sidebar__links2">
+            <li><a>Store Locator</a></li>
+            <li><a>Support</a></li>
+            <li><a>Login/Register</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- end of sidebar  -->
 
-      <!-- GLOBAL NAVIGATION -->
+      <!-- global navbar -->
       <nav class="global-nav">
-        <div class="global-nav__content">
-          <label for="sidebar">
+        <div class="global-nav-center">
+          <div class="menu-bar">
             <div></div>
             <div></div>
-          </label>
-          <a href="../index.html">
-            <img src="../images/etc/logo.png" alt="logo" />
-          </a>
-          <a>
-            <img src="../images/etc/icon-bag.png" alt="bag" />
-          </a>
+          </div>
+          <img
+            src="../images/etc/logo.png"
+            alt="logo"
+            onclick="location.href='../index.html'"
+          />
+          <div class="cart-btn">
+            <span class="cart-icon">
+              <i class="xi-cart-add"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div>
         </div>
       </nav>
+      <!-- end of global navbar -->
 
-      <!--  SIDEBAR  -->
-      <div class="sidebar">
-        <ul class="sidebar__links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="speakers.html">Speakers</a></li>
-          <li><a>Headphones</a></li>
-          <li><a>Televisions</a></li>
-          <li><a>Accessories</a></li>
-          <li><a>Stories</a></li>
-          <li><a>Gifts</a></li>
-        </ul>
-
-        <ul class="sidebar__links2">
-          <li><a>Store Locator</a></li>
-          <li><a>Support</a></li>
-          <li><a>Login/Register</a></li>
-        </ul>
-      </div>
-      <!--  BACKGROUND BLUR  -->
-      <label for="sidebar" class="background"></label>
-
-      <!-- LOCAL NAVIGATION -->
+      <!-- local navbar-->
       <nav class="local-nav">
         <div class="category-btn">
           <span>Category <i class="xi-angle-down-min"></i></span>
@@ -93,36 +91,40 @@
           >
         </div>
       </nav>
+      <!-- end of local navbar-->
 
-      <!-- SUBPAGE CONTENT -->
+      <!-- subpage content -->
       <div class="sub-page-content">
-        <!-- SUBPAGE TITLE -->
         <section class="sub-page-title">
           <div onclick="location.href='speakers.html'">speaker</div>
           <i class="xi-angle-right-thin"></i>
         </section>
 
-        <!-- PRODUCT LIST -->
         <section class="product-list">
-          <ul class="product-item-wrapper">
-            <li
-              class="product-item"
-              style="background-image: url(../images/products/product01.png)"
-              onclick="location.href='beosound-Edge.html'"
-              data-type="multiroom"
-            >
-              <div class="product-item__info">
-                <p class="product-item__info__name">Beosound Edge</p>
-                <p class="product-item__info__price">£2,900</p>
+          <div class="product-item-wrapper">
+            <!-- single product -->
+            <article class="product-item" data-type="${product.type}">
+              <img
+                class="product-img"
+                src="../images/products/product01.png"
+                onclick="location.href='beosound-Edge.html'"
+              />
+              <button class="bag-btn" data-id="${product.id}">
+                add to cart
+              </button>
+              <div class="product-item-info">
+                <p class="product-item-info__name">Beosound Edge</p>
+                <p class="product-item-info__price">£2,900</p>
               </div>
-              <div class="product-item__colors">
+              <div class="product-item-colors">
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
               </div>
-            </li>
-            <li
+            </article>
+            <!-- end of single product -->
+            <!-- <li
               class="product-item"
               style="background-image: url(../images/products/product02.png)"
               data-type="multiroom"
@@ -497,12 +499,13 @@
                 <div></div>
                 <div></div>
               </div>
-            </li>
-          </ul>
+            </li> -->
+          </div>
         </section>
       </div>
+      <!-- end of subpage content -->
 
-      <!-- FOOTER -->
+      <!-- footer -->
       <footer id="footer">
         <div class="footer-wrapper">
           <img
@@ -535,16 +538,16 @@
                 <div class="selected-lang">English</div>
                 <ul>
                   <li>
-                    <a class="cn">China</a>
+                    <a class="cn">Chinese</a>
                   </li>
                   <li>
-                    <a class="dn">Denmark</a>
+                    <a class="dn">dansk</a>
                   </li>
                   <li>
-                    <a class="kr">Korea</a>
+                    <a class="kr">Korean</a>
                   </li>
                   <li>
-                    <a class="us">USA</a>
+                    <a class="us">English</a>
                   </li>
                 </ul>
               </div>
@@ -601,11 +604,13 @@
           <div class="copyright">© Bang & Olufsen 2021</div>
         </div>
       </footer>
+      <!-- end of footer -->
 
-      <!-- ARROW UP -->
+      <!-- arrow up -->
       <button class="arrow-up">
         <i class="xi-angle-up"></i>
       </button>
+      <!-- end of arrow up -->
     </div>
   </body>
 </html>

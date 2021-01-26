@@ -1,11 +1,10 @@
 @charset 'utf-8';
 
-/* loading */
+/* ------------------ loading ------------------ */
 .before-load {
   overflow: hidden;
 }
 
-/* setLayout이 실행을 끝내기 전(스크롤 섹션이 제대로 세팅되기 전)에는 다 안 보이게 한 다음 세팅이 완료되면 다같이 보이게 */
 .before-load .container {
   display: none;
 }
@@ -33,61 +32,56 @@
   display: block;
   position: relative;
   background-color: var(--color-dark-gray);
-  height: 70px;
-  width: 10px;
   border-radius: 50px;
-  margin: 0 5px;
+  height: 50px;
+  width: 8px;
+  margin: 0 3px;
   animation: loading 0.8s linear infinite;
 }
 
 @keyframes loading {
   50% {
-    height: 15px;
+    height: 10px;
   }
 
   100% {
-    height: 70px;
+    height: 50px;
   }
 }
 
-.loading span:nth-child(1) {
+.loading span:nth-child(1),
+.loading span:nth-child(7) {
   animation-delay: 0s;
 }
-.loading span:nth-child(2) {
+.loading span:nth-child(2),
+.loading span:nth-child(6) {
   animation-delay: 0.2s;
 }
-.loading span:nth-child(3) {
+.loading span:nth-child(3),
+.loading span:nth-child(5) {
   animation-delay: 0.4s;
 }
 .loading span:nth-child(4) {
   animation-delay: 0.6s;
 }
-.loading span:nth-child(5) {
-  animation-delay: 0.4s;
-}
-.loading span:nth-child(6) {
-  animation-delay: 0.2s;
-}
-.loading span:nth-child(7) {
-  animation-delay: 0s;
-}
+/* -------------- end of loading ------------- */
 
-/* LOCAL NAVIGATION */
+/* --------------- local navbar -------------- */
 .product-nav {
   max-width: 1200px;
   display: flex;
   align-items: center;
   height: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 .product-nav span {
   color: var(--color-dark-gray);
-  margin-left: 0.7em;
+  margin-left: 0.5em;
 }
 
 .product-nav span:nth-child(1) {
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   font-weight: var(--weight-medium);
 }
 .product-nav span:nth-child(2) {
@@ -99,20 +93,21 @@
 }
 
 .product-nav span:nth-child(3) {
-  font-size: var(--font-small);
+  font-size: var(--font-micro);
   font-weight: var(--weight-regular);
 }
 
 .product-nav a {
   margin-left: auto;
   background-color: var(--color-dark-gray);
-  font-size: var(--font-micro);
+  font-size: 10px;
   color: var(--color-white);
   padding: 0.5em 1em;
   border-radius: 3em;
 }
+/* ------------- end of local navbar ------------ */
 
-/* SCROLL SECTION  */
+/* -------------- scroll section all ------------ */
 .scroll-section {
   position: relative;
 }
@@ -121,7 +116,7 @@
   top: 45vh;
   margin: 5px 0;
   height: 3em;
-  font-size: var(--font-large);
+  font-size: 14px;
   color: var(--color-dark-gray);
   letter-spacing: 0.25em;
   opacity: 0;
@@ -129,26 +124,27 @@
 .main-message p {
   font-weight: var(--weight-medium);
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.8;
+  padding: 0.5em;
 }
 .main-message small {
   display: block;
-  margin-bottom: 1em;
-  font-size: var(--font-small);
+  margin-bottom: 0.8em;
+  font-size: 10px;
 }
 
 .desc-message {
-  top: 15vh;
+  top: 10vh;
   margin: 5px 0;
   height: 1.5em;
-  font-size: var(--font-small);
+  font-size: var(--font-micro);
   color: var(--color-white);
   letter-spacing: 0.1em;
   opacity: 0;
 }
 .desc-message p {
   font-weight: var(--weight-regular);
-  max-width: 35vw;
+  max-width: 60vw;
   line-height: 1.5;
   margin: 0 auto;
   padding: 0 1rem;
@@ -156,7 +152,7 @@
 .desc-message strong {
   display: block;
   margin-bottom: 2em;
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
 }
 
 .sticky-elem-canvas {
@@ -187,11 +183,11 @@
 }
 
 .scroll-effect-end .sticky-elem {
-  /* 스크롤 섹션이 끝났을 때 normal-content 에 있는 sticky-elem을 숨긴다 */
   display: none !important;
 }
+/* ---------- end of all scroll section -------- */
 
-/* SCROLL SECTION - 0 */
+/* ------------ scroll section 0 ------------- */
 #scroll-section-0 {
   text-align: center;
   box-sizing: border-box;
@@ -200,36 +196,30 @@
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  z-index: 1; /* 버튼 클릭 */
 }
 
 .product-detail {
-  margin-top: 150px;
+  margin-top: 140px;
   color: var(--color-dark-gray);
 }
 
-.product-detail p:first-child {
-  font-size: var(--font-large);
+.product-detail p:first-of-type {
+  font-size: var(--font-small);
   font-weight: var(--weight-medium);
   letter-spacing: 0.1em;
-  margin-bottom: 0.4em;
 }
 
-.product-detail p:last-child {
-  font-size: var(--font-regular);
+.product-detail p:last-of-type {
+  font-size: var(--font-small);
+  margin-top: 8px;
 }
-
 .product-detail a {
   display: inline-block;
   font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
   border: 1px solid var(--color-dark-gray);
-  border-radius: 50%;
-  margin-top: 30px;
-  padding: 1.8em 1.3em;
-  color: var(--color-dark-gray);
-  letter-spacing: 0.05em;
-  transition: 0.4s;
+  margin-top: 1.8rem;
+  padding: 0.5em 1em;
+  transition: all 0.35s;
 }
 
 .product-detail a:hover {
@@ -237,7 +227,6 @@
   color: var(--color-white);
 }
 
-/* CIRCULAR SLIDER */
 .slide-btn {
   width: 100vw;
   height: var(--font-large);
@@ -249,30 +238,30 @@
 
 .slide-btn i {
   color: var(--color-dark-gray);
-  font-size: var(--font-large);
+  font-size: 16px;
 }
 
 .slide-btn i:first-child {
-  margin-left: 80px;
+  margin-left: 54px;
 }
 
 .slide-btn i:last-child {
-  margin-right: 80px;
+  margin-right: 54px;
 }
 
 .circular-slide {
   position: absolute;
-  top: 130%;
+  top: 120%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
-  width: 55vh;
-  height: 55vh;
+  width: 50vh;
+  height: 50vh;
   border-radius: 50%;
 }
 
 .circular-slide__image {
   position: absolute;
-  top: -60%;
+  top: -50%;
   left: 50%;
   width: 100%;
   height: 100%;
@@ -296,18 +285,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-dark-gray);
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   font-weight: var(--weight-medium);
   letter-spacing: 0.1em;
   opacity: 0;
 }
+/* ---------- end of scroll section 0 ---------- */
 
-/* SCROLL SECTION - 1 */
+/* -------------- scroll section 1 ------------- */
 #scroll-section-1 {
   background-color: #dadada;
 }
+/* ---------- end of scroll section 1 ---------- */
 
-/* SCROLL SECTION - 2 */
+/* -------------- scroll section 2 ------------- */
 #scroll-section-2 {
   z-index: -1; /* 스크롤 섹션1 가림 방지 */
   background: linear-gradient(180deg, #dadada 5%, #000 65%);
@@ -316,8 +307,9 @@
 #scroll-section-2 .main-message {
   color: var(--color-light-gray);
 }
+/* ---------- end of scroll section 2 ---------- */
 
-/* SCROLL SECTION - 3 */
+/* -------------- scroll section 3 ------------- */
 #scroll-section-3,
 #scroll-section-4 {
   box-sizing: border-box;
@@ -335,7 +327,9 @@
   left: 5%;
 }
 
-/* SCROLL SECTION - 4 */
+/* ---------- end of scroll section 3 ---------- */
+
+/* -------------- scroll section 4 ------------- */
 #scroll-section-4 {
   background-image: url(../images/beosound_edge/section02.png);
 }
@@ -348,8 +342,9 @@
   position: absolute;
   right: 3%;
 }
+/* ---------- end of scroll section 4 ---------- */
 
-/* SCROLL SECTION - 5 */
+/* --------------- scroll section 5 ------------- */
 #scroll-section-5 {
   margin-bottom: 45vh;
   background: linear-gradient(180deg, #818181 0%, #fff 100%);
@@ -358,7 +353,7 @@
 .mid-message {
   top: 15vh;
   margin: 5px 0;
-  font-size: var(--font-small);
+  font-size: var(--font-micro);
   color: var(--color-dark-gray);
   letter-spacing: 0.1em;
   opacity: 0;
@@ -367,15 +362,15 @@
   font-weight: var(--weight-medium);
   text-align: center;
   line-height: 1.5;
-  max-width: 45vw;
+  max-width: 80vw;
   margin: 0 auto 3em;
   padding: 0 1rem;
   position: relative;
 }
 .mid-message strong {
   display: block;
-  margin-bottom: 1.5em;
-  font-size: var(--font-regular);
+  margin-bottom: 2em;
+  font-size: var(--font-small);
 }
 
 .mid-message .anchor-button {
@@ -386,21 +381,22 @@
   left: 50%;
   transform: translateX(-50%);
   color: var(--color-dark-gray);
-  font-size: var(--font-micro);
+  font-size: 8px;
   font-weight: var(--weight-medium);
 }
+/* ---------- end of scroll section 5 ---------- */
 
-/* SECTION : NORMAL CONTENT */
+/* --------------- normal section -------------- */
 .normal-content {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
 
-/* background 관련 css 공통 적용 안 돼서 일일이 지정 */
+/* background 관련 css 공통 적용이 안 됨 */
 #normal-content-1 {
   background: url(../images/beosound_edge/section03.png);
-  box-sizing: border-box;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -422,11 +418,11 @@
 
 .description {
   position: absolute;
-  max-width: 30vw;
+  max-width: 55vw;
   line-height: 1.5;
   margin: 0 auto;
   padding: 0 1rem;
-  font-size: var(--font-small);
+  font-size: var(--font-micro);
   color: var(--color-light-gray);
   letter-spacing: 0.1em;
   top: 50%;
@@ -435,18 +431,18 @@
 
 .description strong {
   display: block;
-  font-size: var(--font-regular);
-  margin-bottom: 1.5em;
+  font-size: var(--font-small);
+  margin-bottom: 2em;
 }
 
 #normal-content-1 .description {
   color: var(--color-dark-gray);
-  left: 3%;
+  left: 0%;
 }
 
 #normal-content-2 .description {
-  top: 45%;
-  left: 5%;
+  top: 43%;
+  left: 0%;
 }
 
 #normal-content-2 .anchor-button {
@@ -455,169 +451,167 @@
   border: 1px solid var(--color-light-gray);
   position: absolute;
   bottom: -70px;
-  left: 5%;
+  left: 10%;
   color: var(--color-light-gray);
-  font-size: var(--font-micro);
+  font-size: 8px;
 }
 
 #normal-content-3 .description {
-  right: 8%;
+  text-align: right;
+  right: 0%;
 }
+/* ------------ end of normal section ----------- */
 
-/* MOBILE ( ~ 767px) */
-@media screen and (max-width: 767px) {
+/* ---------------- media query ----------------- */
+@media screen and (min-width: 768px) {
   .loading span {
-    height: 50px;
-    width: 8px;
-    margin: 0 3px;
+    height: 70px;
+    width: 10px;
+    margin: 0 5px;
   }
 
   @keyframes loading {
     50% {
-      height: 10px;
+      height: 15px;
     }
 
     100% {
-      height: 50px;
+      height: 70px;
     }
   }
 
   .product-nav {
-    padding: 0;
+    padding: 0 1rem;
   }
+
   .product-nav span {
-    margin-left: 0.5em;
+    margin-left: 0.7em;
   }
+
   .product-nav span:nth-child(1) {
-    font-size: var(--font-small);
+    font-size: var(--font-regular);
   }
 
   .product-nav span:nth-child(3) {
-    font-size: var(--font-micro);
+    font-size: var(--font-small);
   }
 
   .product-nav a {
-    font-size: 10px;
-  }
-
-  .main-message {
-    font-size: 14px;
-  }
-  .main-message p {
-    font-weight: var(--weight-medium);
-    line-height: 1.8;
-    padding: 0.5em;
-  }
-  .main-message small {
-    display: block;
-    margin-bottom: 0.8em;
-    font-size: 10px;
-  }
-
-  .desc-message {
-    top: 10vh;
     font-size: var(--font-micro);
   }
 
+  .main-message {
+    font-size: var(--font-large);
+  }
+
+  .main-message p {
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  .main-message small {
+    margin-bottom: 1em;
+    font-size: var(--font-small);
+  }
+
+  .desc-message {
+    top: 15vh;
+    font-size: var(--font-small);
+  }
+
   .desc-message p {
-    max-width: 60vw;
+    max-width: 35vw;
   }
 
   .desc-message strong {
-    font-size: var(--font-small);
+    font-size: var(--font-regular);
   }
 
   .product-detail {
-    margin-top: 140px;
-    color: var(--color-dark-gray);
+    margin-top: 150px;
   }
 
-  .product-detail p:first-child {
-    font-size: var(--font-small);
+  .product-detail p:first-of-type {
+    font-size: var(--font-large);
   }
-  .product-detail p:last-child {
-    font-size: var(--font-small);
+  .product-detail p:last-of-type {
+    font-size: var(--font-regular);
   }
 
   .product-detail a {
-    font-size: 8px;
-    margin-top: 25px;
-    padding: 1.8em 1.3em;
-    color: var(--color-dark-gray);
-    letter-spacing: 0.05em;
-    transition: 0.4s;
+    font-size: var(--font-small);
+    margin-top: 40px;
+    padding: 0.55em 2em;
   }
 
   .circular-slide {
-    width: 50vh;
-    height: 50vh;
+    width: 55vh;
+    height: 55vh;
   }
 
   .subTitle h2 {
-    font-size: var(--font-small);
+    font-size: var(--font-regular);
   }
 
   .subTitle,
   .slide-btn {
-    bottom: 3%;
+    bottom: 6%;
   }
 
   .slide-btn i {
-    color: var(--color-dark-gray);
-    font-size: 16px;
+    font-size: var(--font-large);
   }
   .slide-btn i:first-child {
-    margin-left: 54px;
+    margin-left: 80px;
   }
 
   .slide-btn i:last-child {
-    margin-right: 54px;
+    margin-right: 80px;
   }
 
   .mid-message {
-    font-size: var(--font-micro);
+    font-size: var(--font-small);
   }
   .mid-message p {
-    max-width: 80vw;
+    max-width: 45vw;
   }
+
   .mid-message strong {
-    margin-bottom: 2em;
-    font-size: var(--font-small);
+    margin-bottom: 1.5em;
+    font-size: var(--font-regular);
   }
 
   .mid-message .anchor-button {
-    font-size: 8px;
-  }
-
-  .description {
-    max-width: 55vw;
-    line-height: 1.5;
     font-size: var(--font-micro);
   }
 
-  .description strong {
+  .description {
+    max-width: 30vw;
     font-size: var(--font-small);
-    margin-bottom: 2em;
+  }
+
+  .description strong {
+    font-size: var(--font-regular);
+    margin-bottom: 1.5em;
   }
 
   #normal-content-1 .description {
-    left: 0%;
+    left: 3%;
   }
 
   #normal-content-2 .description {
-    top: 43%;
-    left: 0%;
+    top: 45%;
+    left: 5%;
   }
 
   #normal-content-2 .anchor-button {
-    bottom: -70px;
-    left: 10%;
-    color: var(--color-light-gray);
-    font-size: 8px;
+    font-size: var(--font-micro);
+    left: 5%;
   }
 
   #normal-content-3 .description {
-    text-align: right;
-    right: 0%;
+    right: 5%;
   }
 }
+
+/* ----------- end of media query --------------- */

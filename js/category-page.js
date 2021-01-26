@@ -1,7 +1,6 @@
 "use strict";
 
 (() => {
-  // EXPRESSION
   const mark = document.querySelector(".mark");
   const link = document.querySelectorAll(".filter-category__link");
   const filterCategory = document.querySelector(".filter-category");
@@ -12,13 +11,6 @@
     mark.style.width = `${e.offsetWidth}px`;
   }
 
-  link.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      indicator(e.target);
-    });
-  });
-
-  // data 타입에 따라 카테고리가 필터링 됨
   function filtering(e) {
     const filter = e.target.dataset.filter;
     const itemWrapper = document.querySelector(".product-item-wrapper");
@@ -40,6 +32,13 @@
       itemWrapper.classList.remove("ani-out");
     }, 300);
   }
+
+  link.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      indicator(e.target);
+      filterCategory.classList.toggle("show");
+    });
+  });
 
   categoryBtn.addEventListener("click", () => {
     filterCategory.classList.toggle("show");

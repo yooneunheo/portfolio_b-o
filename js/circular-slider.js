@@ -1,7 +1,6 @@
 "use strict";
 
 (() => {
-  // EXPRESSION
   const circularSlide = document.querySelectorAll(".circular-slide");
   const slideImage = document.querySelectorAll(".circular-slide__image");
   const slideBtn = document.querySelectorAll(".slide-btn button");
@@ -12,10 +11,8 @@
 
   (() => {
     for (let i = 0; i < sLength; i++) {
-      // 애니메이션 동작을 부드럽게
       circularSlide[i].style.transition = `${transition / 2}ms ease`;
 
-      // 새로고침을 눌렀을 때 첫번째 슬라이드 등장
       if (i === 0) {
         setTimeout(() => {
           circularSlide[
@@ -53,7 +50,6 @@
 
   function nextSlider() {
     let x = rotate;
-    // 마지막 슬라이드에서 다음 버튼을 눌렀을 때
     if (x === sLength - 1) {
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(5deg)`;
 
@@ -91,7 +87,6 @@
 
   function prevSlider() {
     let x = rotate;
-    // 첫번째 슬라이드에서 이전 버튼을 눌렀을 때
     if (x === 0) {
       circularSlide[x].style.transform = `translate(-50%, -50%) rotate(-5deg)`;
 
