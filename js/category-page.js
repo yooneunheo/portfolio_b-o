@@ -33,18 +33,18 @@
     }, 300);
   }
 
-  link.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      indicator(e.target);
-      filterCategory.classList.toggle("show");
-    });
-  });
-
   categoryBtn.addEventListener("click", () => {
     filterCategory.classList.toggle("show");
   });
 
   filterCategory.addEventListener("click", (e) => {
     filtering(e);
+  });
+
+  link.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      indicator(e.target);
+      filterCategory.classList.toggle("show");
+    });
   });
 })();

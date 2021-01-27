@@ -17,8 +17,5 @@
   }
 
   menu.addEventListener("click", showSidebar);
-
   closeCartBtn.addEventListener("click", hideSidebar);
-
-  sidebarOverlay.addEventListener("click", hideSidebar);
 })();

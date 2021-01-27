@@ -478,6 +478,7 @@
         break;
     }
   }
+
   function scrollLoop() {
     // 현재 몇번째 스크롤 섹션이 활성되어있는지 계산해서 그 섹션에 맞는 애니메이션 활성화
     // 스크롤 섹션 끝났을 때 normal-content 에 있는 sticky-elem을 숨김

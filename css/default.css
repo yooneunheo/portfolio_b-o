@@ -183,5 +183,8 @@ a {
   --weight-medium: 500;
   --weight-semi-bold: 600;
   --weight-bold: 700;
+
+  /* transition */
+  --mainTransition: all 0.3s linear;
 }
 /* ------------ end of user custom -------------- */

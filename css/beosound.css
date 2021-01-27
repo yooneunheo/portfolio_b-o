@@ -216,10 +216,10 @@
 .product-detail a {
   display: inline-block;
   font-size: var(--font-micro);
-  border: 1px solid var(--color-dark-gray);
+  border: 1px solid var(--color-gray);
   margin-top: 1.8rem;
   padding: 0.5em 1em;
-  transition: all 0.35s;
+  transition: var(--mainTransition);
 }
 
 .product-detail a:hover {
@@ -393,7 +393,7 @@
   height: 100vh;
 }
 
-/* background 관련 css 공통 적용이 안 됨 */
+/* background 관련 공통 css 적용시 배경화면 짤리는 현상 발생*/
 #normal-content-1 {
   background: url(../images/beosound_edge/section03.png);
 

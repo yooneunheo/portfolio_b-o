@@ -7,6 +7,7 @@
   const subTitleText = document.querySelectorAll(".subTitle h2");
   const sLength = slideImage.length;
   const transition = 1000;
+  const [prev, next] = slideBtn;
   let rotate = 0;
 
   (() => {
@@ -43,10 +44,6 @@
     subTitleText[x].style.opacity = 0;
     subTitleText[x].style.top = "100%";
   }
-
-  const [prev, next] = slideBtn;
-  next.addEventListener("click", nextSlider);
-  prev.addEventListener("click", prevSlider);
 
   function nextSlider() {
     let x = rotate;
@@ -121,4 +118,7 @@
       }, transition * 1.5);
     }
   }
+
+  next.addEventListener("click", nextSlider);
+  prev.addEventListener("click", prevSlider);
 })();

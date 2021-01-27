@@ -1,0 +1,268 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Beosound Edge",
+        "price": 3250,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product01.png" } }
+        },
+        "type": "multiroom"
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "Beosound Balance",
+        "price": 2000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product02.png" } }
+        },
+        "type": "multiroom"
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "Beosound stage",
+        "price": 1500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product03.png" } }
+        },
+        "type": "multiroom, theatre"
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "Beolit 20",
+        "price": 500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product04.png" } }
+        },
+        "type": "portable"
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "Beosound 1",
+        "price": 1500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product05.png" } }
+        },
+        "type": "portable, multiroom"
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "Beosound 2",
+        "price": 2000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product06.png" } }
+        },
+        "type": "multiroom"
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "Beoplay A9",
+        "price": 2500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product07.png" } }
+        },
+        "type": "multiroom"
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Beogram 4000c - Recreated Limited Edition",
+        "price": 10000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product08.png" } }
+        },
+        "type": "stereo"
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "title": "Beosound A1 2nd Gen",
+        "price": 250,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product09.png" } }
+        },
+        "type": "portable"
+      }
+    },
+    {
+      "sys": { "id": "10" },
+      "fields": {
+        "title": "Beoplay M3",
+        "price": 300,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product10.png" } }
+        },
+        "type": "multiroom"
+      }
+    },
+    {
+      "sys": { "id": "11" },
+      "fields": {
+        "title": "Beoplay M5",
+        "price": 600,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product11.png" } }
+        },
+        "type": "multiroom"
+      }
+    },
+    {
+      "sys": { "id": "12" },
+      "fields": {
+        "title": "Beoplay P6",
+        "price": 3000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product12.png" } }
+        },
+        "type": "portable"
+      }
+    },
+    {
+      "sys": { "id": "13" },
+      "fields": {
+        "title": "Beosound Stage and Beosound 1",
+        "price": 4750,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product13.png" } }
+        },
+        "type": "sets"
+      }
+    },
+    {
+      "sys": { "id": "14" },
+      "fields": {
+        "title": "Beosound Edge and Beosound 1",
+        "price": 3500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product14.png" } }
+        },
+        "type": "sets"
+      }
+    },
+    {
+      "sys": { "id": "15" },
+      "fields": {
+        "title": "Beosound 2 and Beosound 1",
+        "price": 3500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product15.png" } }
+        },
+        "type": "sets"
+      }
+    },
+    {
+      "sys": { "id": "16" },
+      "fields": {
+        "title": "Beosound Shape",
+        "price": 1200,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product16.png" } }
+        },
+        "type": "theatre, architectural"
+      }
+    },
+    {
+      "sys": { "id": "17" },
+      "fields": {
+        "title": "Beolab 18",
+        "price": 7000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product17.png" } }
+        },
+        "type": "theatre, stereo"
+      }
+    },
+    {
+      "sys": { "id": "18" },
+      "fields": {
+        "title": "Beolab 90",
+        "price": 8000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product18.png" } }
+        },
+        "type": "theatre, stereo"
+      }
+    },
+    {
+      "sys": { "id": "19" },
+      "fields": {
+        "title": "Beolab 50",
+        "price": 3500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product19.png" } }
+        },
+        "type": "theatre, stereo"
+      }
+    },
+    {
+      "sys": { "id": "20" },
+      "fields": {
+        "title": "Beolab 17",
+        "price": 4500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product20.png" } }
+        },
+        "type": "theatre, stereo"
+      }
+    },
+    {
+      "sys": { "id": "21" },
+      "fields": {
+        "title": "Beolab 19",
+        "price": 3500,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product21.png" } }
+        },
+        "type": "theatre, stereo"
+      }
+    },
+    {
+      "sys": { "id": "22" },
+      "fields": {
+        "title": "Beolab 20",
+        "price": 11000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product22.png" } }
+        },
+        "type": "stereo, theatre"
+      }
+    },
+    {
+      "sys": { "id": "23" },
+      "fields": {
+        "title": "Celestial",
+        "price": 1200,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product23.png" } }
+        },
+        "type": "architectural"
+      }
+    },
+    {
+      "sys": { "id": "24" },
+      "fields": {
+        "title": "Palatial",
+        "price": 12000,
+        "image": {
+          "fields": { "file": { "url": "../images/products/product24.png" } }
+        },
+        "type": "architectural"
+      }
+    }
+  ]
+}

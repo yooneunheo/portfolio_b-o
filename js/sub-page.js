@@ -7,10 +7,10 @@
   const sidebarOverlay = document.querySelector(".sidebar-overlay");
   const sidebar = document.querySelector(".sidebar");
   const closeCartBtn = document.querySelector(".sidebar__close");
-  let yOffset = 0; // window.pageYOffset
   const globalNavHeight = document
     .querySelector(".global-nav")
     .getBoundingClientRect().height;
+  let yOffset = 0; // window.pageYOffset
 
   function showSidebar() {
     sidebarOverlay.classList.add("transparentBg");
@@ -21,12 +21,6 @@
     sidebarOverlay.classList.remove("transparentBg");
     sidebar.classList.remove("showSidebar");
   }
-
-  menubar.addEventListener("click", showSidebar);
-
-  closeCartBtn.addEventListener("click", hideSidebar);
-
-  sidebarOverlay.addEventListener("click", hideSidebar);
 
   function stickyNav() {
     if (yOffset > globalNavHeight) {
@@ -48,6 +42,9 @@
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     });
   }
+
+  menubar.addEventListener("click", showSidebar);
+  closeCartBtn.addEventListener("click", hideSidebar);
 
   window.addEventListener("scroll", () => {
     yOffset = window.pageYOffset;
