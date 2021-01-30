@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- cache control -->
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <!-- full screen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- icon -->
+    <link rel="stylesheet" type="text/css" href="../XEIcon/xeicon.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <!-- script -->
+    <script src="../js/login.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <!-- back -->
+    <div class="back" onclick="history.back()">
+      <i class="xi-long-arrow-left"></i>
+    </div>
+    <!-- end of back -->
+
+    <div class="container">
+      <!-- login-form -->
+      <section class="form-wrapper">
+        <h1>My Account</h1>
+        <div id="error"></div>
+
+        <!-- form -->
+        <form id="login-form" action="/">
+          <!-- input area -->
+          <div class="input-area">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+              required
+            />
+            <label for="email">Email</label>
+            <div class="underline"></div>
+          </div>
+          <div class="input-area">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autocomplete="off"
+              required
+            />
+            <label for="password">Password</label>
+            <div class="underline"></div>
+          </div>
+          <!-- end of input area -->
+
+          <!-- btn area -->
+          <div class="btn-area">
+            <button id="btn" type="submit">LOG IN</button>
+          </div>
+          <!-- end of btn area -->
+        </form>
+        <!-- end of form -->
+
+        <!-- caption -->
+        <div class="caption">
+          <a>Resister a New Account</a>
+          <a>Forgot Password?</a>
+        </div>
+        <!-- end of caption -->
+
+        <!-- sns login -->
+        <div class="sns-login">
+          <div>LOG IN WITH OTHER SERVICES</div>
+          <div class="sns-icons">
+            <a class="sns-icon"><i class="xi-facebook"></i></a>
+            <a class="sns-icon"><i class="xi-google"></i></a>
+            <a class="sns-icon"><i class="xi-apple"></i></a>
+            <a class="sns-icon"><i class="xi-windows"></i></a>
+          </div>
+        </div>
+        <!-- end of sns login -->
+      </section>
+      <!-- end of login-form -->
+
+      <!-- copyright -->
+      <div class="copyright">© Bang & Olufsen 2021</div>
+      <!-- end of copyright -->
+    </div>
+  </body>
+</html>
