@@ -48,7 +48,7 @@
 					<button class="bag-btn" data-id=${product.id}>add to cart</button>
 					<div class="product-item-info">
 						<p class="product-item-info__name">${product.title}</p>
-						<p class="product-item-info__price">$${product.price.toLocaleString()}</p>
+						<p class="product-item-info__price">€${product.price.toLocaleString()}</p>
 					</div>
 					<div class="product-item-colors">
 						<div></div>

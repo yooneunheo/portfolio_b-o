@@ -220,6 +220,7 @@
   margin-top: 1.8rem;
   padding: 0.5em 1em;
   transition: var(--mainTransition);
+  z-index: 2;
 }
 
 .product-detail a:hover {
@@ -462,6 +463,13 @@
 }
 /* ------------ end of normal section ----------- */
 
+/* ---------------- subpage for cart -------------- */
+.sub-page-title,
+.product-list {
+  display: none;
+}
+/* ------------ end of subpage for cart ----------- */
+
 /* ---------------- media query ----------------- */
 @media screen and (min-width: 768px) {
   .loading span {
@@ -613,5 +621,4 @@
     right: 5%;
   }
 }
-
 /* ----------- end of media query --------------- */

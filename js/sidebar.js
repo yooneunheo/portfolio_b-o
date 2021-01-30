@@ -1,7 +1,7 @@
 "use strict";
 
 (() => {
-  const menu = document.querySelector("#main-menu");
+  const menu = document.querySelector(".menu-bar");
   const sidebarOverlay = document.querySelector(".sidebar-overlay");
   const sidebar = document.querySelector(".sidebar");
   const closeCartBtn = document.querySelector(".sidebar__close");

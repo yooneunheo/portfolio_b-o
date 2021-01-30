@@ -1,86 +1,6 @@
-/* 서브 페이지 공통 요소 (sidebar, arrow up, sticky navbar) */
+/*  navbars, footer, arrow up,  */
 
 @charset 'utf-8';
-
-/* -------------- sidebar -------------- */
-.sidebar-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(180, 180, 180, 0.4);
-  transition: var(--mainTransition);
-  z-index: 11;
-  visibility: hidden;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 15;
-  background: var(--color-white);
-  transition: var(--mainTransition);
-  transform: translateX(-100%);
-}
-
-.showSidebar {
-  transform: translateX(0);
-}
-
-.transparentBg {
-  visibility: visible;
-}
-
-.sidebar__close {
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em;
-  font-size: var(--font-large);
-  color: var(--color-dark-gray);
-  cursor: pointer;
-}
-
-.sidebar__links,
-.sidebar__links2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar__links {
-  margin: 5.5em 1.5em 1.5em;
-}
-
-.sidebar__links2 {
-  margin-left: 1.5em;
-}
-
-.sidebar__links > li > a,
-.sidebar__links2 > li > a {
-  display: inline-block;
-  color: var(--color-dark-gray);
-  transition: var(--mainTransition);
-}
-
-.sidebar__links > li > a {
-  margin: 0.5em;
-  font-size: var(--font-regular);
-}
-
-.sidebar__links2 > li > a {
-  margin: 0.5em;
-  font-size: var(--font-small);
-}
-
-.sidebar__links > li:hover > a,
-.sidebar__links2 > li:hover > a {
-  color: #ddd;
-}
-/* ---------- end of sidebar ---------- */
 
 /* ---------- global navbar ---------- */
 .global-nav {
@@ -427,26 +347,6 @@ input[id*="footer__"] + label + div a:hover {
 
 /* ------------ media query ------------ */
 @media screen and (min-width: 768px) {
-  .sidebar {
-    width: 440px;
-  }
-
-  .sidebar__links {
-    margin: 7em 1.5em 2em;
-  }
-
-  .sidebar__links2 {
-    margin-left: 1.5em;
-  }
-
-  .sidebar__links > li > a {
-    font-size: var(--font-large);
-  }
-
-  .sidebar__links2 > li > a {
-    font-size: var(--font-regular);
-  }
-
   .global-nav {
     padding: 0 1.5rem;
   }
