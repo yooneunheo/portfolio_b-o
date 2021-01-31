@@ -46,7 +46,6 @@ body::before {
   font-size: var(--font-xlarge);
   color: var(--color-white);
   text-align: center;
-  margin-bottom: 20px;
   letter-spacing: 0.1em;
 }
 
@@ -61,14 +60,13 @@ body::before {
 .input-area {
   position: relative;
   width: 70vw;
-  margin-top: 1.3em;
-  overflow: hidden;
+  margin-top: 12%;
 }
 
 .input-area input {
   width: 100%;
-  padding: 15px 8px 8px;
   background-color: transparent;
+  padding: 10px 0 2px;
   border: none;
   border-bottom: 1px solid var(--color-dark-gray);
   font-size: var(--font-small);
@@ -76,10 +74,18 @@ body::before {
   outline: none;
 }
 
+.input-area.success input {
+  border-color: #2ecc71;
+}
+
+.input-area.error input {
+  border-color: #e74c3c;
+}
+
 .input-area label {
   position: absolute;
-  left: 8px;
-  top: 1em;
+  top: 0.5em;
+  left: 0px;
   font-size: var(--font-micro);
   color: var(--color-light-gray);
   letter-spacing: 0.05em;
@@ -88,12 +94,12 @@ body::before {
 
 .input-area input:focus + label,
 .input-area input:valid + label {
-  top: -2px;
+  transform: translateY(-8px);
   font-size: 10px;
   color: var(--color-gray);
 }
 
-.input-area label.warning {
+.input-area.error label {
   color: red !important;
   animation: warning 0.3s ease;
   animation-iteration-count: 3;
@@ -109,24 +115,42 @@ body::before {
   }
 }
 
-.input-area .underline {
+.input-area i {
+  visibility: hidden;
   position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
+  top: 0.5rem;
+  right: 0;
 }
 
-.input-area .underline.warning {
-  background-color: red;
-  transform: translateX(0);
+.input-area.success i.xi-check-circle {
+  color: #2ecc71;
+  visibility: visible;
 }
+
+.input-area.error i.xi-error {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.input-area small {
+  font-size: 11px;
+  color: #e74c3c;
+  position: absolute;
+  bottom: -1rem;
+  left: 2px;
+  visibility: hidden;
+  letter-spacing: -0.05em;
+}
+
+.input-area.error small {
+  visibility: visible;
+}
+
 /* ------------ end of input-area ----------- */
 
 /* ---------------- btn-area ---------------- */
 .btn-area {
-  margin-top: 35px;
+  margin-top: 45px;
 }
 
 #btn {
@@ -218,32 +242,41 @@ body::before {
 
   .form-wrapper h1 {
     font-size: 2.5em;
-    margin-bottom: 40px;
   }
 
   .input-area {
     width: 400px;
-    margin-top: 30px;
+    margin-top: 15%;
   }
 
   .input-area input {
-    padding: 20px 10px 10px;
-    font-size: 18px;
+    padding: 5px 0;
+    font-size: var(--font-regular);
   }
 
   .input-area label {
-    left: 10px;
-    top: 15px;
+    top: 0;
     font-size: var(--font-regular);
   }
 
   .input-area input:focus + label,
   .input-area input:valid + label {
+    transform: translateY(-15px);
     font-size: var(--font-small);
   }
 
+  .input-area i {
+    font-size: 23px;
+    top: -0.2rem;
+  }
+
+  .input-area small {
+    font-size: var(--font-small);
+    bottom: -1.2rem;
+  }
+
   .btn-area {
-    margin-top: 50px;
+    margin-top: 55px;
   }
 
   #btn {
