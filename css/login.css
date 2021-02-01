@@ -94,7 +94,7 @@ body::before {
 
 .input-area input:focus + label,
 .input-area input:valid + label {
-  transform: translateY(-8px);
+  top: -8px;
   font-size: 10px;
   color: var(--color-gray);
 }
@@ -261,7 +261,7 @@ body::before {
 
   .input-area input:focus + label,
   .input-area input:valid + label {
-    transform: translateY(-15px);
+    top: -15px;
     font-size: var(--font-small);
   }
 

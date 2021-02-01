@@ -1,8 +1,6 @@
 "use strict";
 
 (() => {
-  // const slideBtn = document.querySelectorAll(".slide-btn button");
-  // const slideImage = document.querySelectorAll(".circular-slide__image");
   const circularSlide = document.querySelectorAll(".circular-slide");
   const sLength = document.querySelectorAll(".circular-slide__image").length;
   const [prev, next] = document.querySelectorAll(".slide-btn button");

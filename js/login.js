@@ -14,10 +14,20 @@
   function checkInputs() {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
+    const emailLabel = email.nextElementSibling;
 
     if (emailValue === "" || emailValue == null) {
       setErrorFor(email, "Email cannot be blank");
     } else if (!isEmail(emailValue)) {
+      if (window.innerWidth < 768) {
+        emailLabel.style.top = "-8px";
+        emailLabel.style.fontSize = "10px";
+      } else {
+        emailLabel.style.top = "-15px";
+        emailLabel.style.fontSize = "15px";
+      }
+      emailLabel.style.color = "#a4a4a4";
+
       setErrorFor(email, "Email is not valid");
     } else {
       setSucessFor(email);
