@@ -1,12 +1,12 @@
 "use strict";
 
 (() => {
-  const mark = document.querySelector(".mark");
   const link = document.querySelectorAll(".filter-category__link");
   const filterCategory = document.querySelector(".filter-category");
   const categoryBtn = document.querySelector(".category-btn");
 
   function indicator(e) {
+    const mark = document.querySelector(".mark");
     mark.style.left = `${e.offsetLeft}px`;
     mark.style.width = `${e.offsetWidth}px`;
   }

@@ -7,6 +7,7 @@
 
   // 즉각적인 반응을 위해 form의 submit이 아닌 btn의 click 이벤트로 처리
   btn.addEventListener("click", (e) => {
+    e.preventDefault();
     checkInputs();
   });
 

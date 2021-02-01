@@ -1,13 +1,12 @@
 "use strict";
 
 (() => {
+  // const slideBtn = document.querySelectorAll(".slide-btn button");
+  // const slideImage = document.querySelectorAll(".circular-slide__image");
   const circularSlide = document.querySelectorAll(".circular-slide");
-  const slideImage = document.querySelectorAll(".circular-slide__image");
-  const slideBtn = document.querySelectorAll(".slide-btn button");
-  const subTitleText = document.querySelectorAll(".subTitle h2");
-  const sLength = slideImage.length;
+  const sLength = document.querySelectorAll(".circular-slide__image").length;
+  const [prev, next] = document.querySelectorAll(".slide-btn button");
   const transition = 1000;
-  const [prev, next] = slideBtn;
   let rotate = 0;
 
   (() => {
@@ -36,11 +35,13 @@
   })();
 
   function titleShow(x) {
+    const subTitleText = document.querySelectorAll(".subTitle h2");
     subTitleText[x].style.opacity = 1;
     subTitleText[x].style.top = "0%";
   }
 
   function titleFade(x) {
+    const subTitleText = document.querySelectorAll(".subTitle h2");
     subTitleText[x].style.opacity = 0;
     subTitleText[x].style.top = "100%";
   }
