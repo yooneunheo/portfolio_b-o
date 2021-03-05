@@ -1,7 +1,7 @@
 # :pushpin: bang-olufsen
 
 > 뱅앤올룹슨 웹사이트 리디자인 (개인 프로젝트)  
-> http://yoonheo0419.dothome.co.kr/
+> https://yooneunheo.github.io/bang-olufsen/
 
 <br />
 
