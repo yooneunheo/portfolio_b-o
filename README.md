@@ -110,20 +110,4 @@
 
 <br />
 
-## 4. 핵심 트러블 슈팅
 
-<details>
-<summary><b>핵심 트러블 슈팅 설명 펼치기</b></summary>
-<div markdown="1">
-(추가 예정)
-
-</div>
-</details>
-
-<br />
-
-## 5. 회고
-
-> 프로젝트 회고 : (추가 예정)
-
-<br />
